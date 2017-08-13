@@ -1,0 +1,129 @@
+#mail {
+
+    .search-bar {
+        height: 5.6rem;
+        background: #FFFFFF;
+        @include mdc-elevation(7);
+
+        .sidebar-toggle-button {
+            width: 5.6rem;
+            height: 5.6rem;
+            border-radius: 0 !important;
+            border-right: 1px solid rgba(0, 0, 0, .12);
+        }
+
+        > i {
+        }
+
+        .search-bar-input {
+            height: 5.6rem;
+            color: rgba(0, 0, 0, 0.54);
+            border: none;
+            outline: none;
+        }
+    }
+
+    .thread-list {
+
+        .no-threads {
+            background: #FAFAFA;
+            width: 100%;
+            text-align: center;
+            padding: 32px;
+            font-size: 20px;
+        }
+
+        .thread {
+            background: #FAFAFA;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+
+            &.unread {
+                background: #FFFFFF;
+
+                .info {
+
+                    .name,
+                    .subject {
+                        font-weight: 700;
+                    }
+
+                    .message {
+
+                        .labels {
+                            background: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+            &.selected {
+                background: #FFF8E1;
+
+                .info {
+
+                    .message {
+
+                        .labels {
+                            background: #FFF8E1;
+                        }
+                    }
+                }
+            }
+
+            .info {
+
+                .name {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    padding-bottom: .8rem;
+
+                    .avatar {
+                        background: #039BE5;
+                    }
+
+                    .has-attachment {
+                        margin-left: .8rem;
+                        transform: rotate(90deg);
+                    }
+                }
+
+                .subject {
+
+                }
+
+                .message {
+                    position: relative;
+                    color: rgba(0, 0, 0, 0.54);
+
+                    .labels {
+                        position: absolute;
+                        background: #FAFAFA;
+                        top: 0;
+                        right: 0;
+                        padding-left: 6px;
+
+                        .label {
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .time {
+                text-align: center;
+            }
+
+            .actions {
+
+                .icon-star,
+                .icon-label {
+                    color: #FFC107;
+                }
+            }
+        }
+    }
+}

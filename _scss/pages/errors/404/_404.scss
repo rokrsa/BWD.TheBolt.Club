@@ -1,0 +1,28 @@
+#error-404 {
+    flex: 1;
+
+    .content {
+        width: 90%;
+        max-width: 51.2rem;
+
+        .error-code {
+            font-weight: 500;
+        }
+
+        .message {
+        }
+
+        .search {
+            height: 5.6rem;
+            line-height: 5.6rem;
+
+            input {
+                background: transparent;
+            }
+        }
+
+        .back-link {
+            font-size: 1.5rem;
+        }
+    }
+}

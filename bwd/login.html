@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Login - Bolt Wildcard License Management</title>
+        <link rel="shortcut icon" href="http://www.thebolt.club/img/favicon.png">
+
+        <!-- STYLESHEETS -->
+        <style type="text/css">
+            [fuse-cloak],
+            .fuse-cloak {
+                display: none !important;
+            }
+        </style>
+
+        <!-- Icons.css -->
+        <link type="text/css" rel="stylesheet" href="../assets/icons/fuse-icon-font/style.css">
+
+        <!-- Animate.css -->
+        <link type="text/css" rel="stylesheet" href="../assets/vendor/animate.css/animate.min.css">
+
+        <!-- PNotify -->
+        <link type="text/css" rel="stylesheet" href="../assets/vendor/pnotify/pnotify.custom.min.css">
+
+        <!-- Nvd3 - D3 Charts -->
+        <link type="text/css" rel="stylesheet" href="../assets/vendor/nvd3/build/nv.d3.min.css"/>
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css" rel="stylesheet" href="../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
+
+        <!-- Fuse Html -->
+        <link type="text/css" rel="stylesheet" href="../assets/vendor/fuse-html/fuse-html.min.css"/>
+
+        <!-- Main CSS -->
+        <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
+        <!-- / STYLESHEETS -->
+
+        <!-- JAVASCRIPT -->
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+
+        <!-- Mobile Detect -->
+        <script type="text/javascript" src="../assets/vendor/mobile-detect/mobile-detect.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script type="text/javascript"
+                src="../assets/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+
+        <!-- Popper.js -->
+        <script type="text/javascript" src="../assets/vendor/popper.js/index.js"></script>
+
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+        <!-- Nvd3 - D3 Charts -->
+        <script type="text/javascript" src="../assets/vendor/d3/d3.min.js"></script>
+        <script type="text/javascript" src="../assets/vendor/nvd3/build/nv.d3.min.js"></script>
+
+        <!-- Data tables -->
+        <script type="text/javascript" src="../assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+
+        <script type="text/javascript"
+                src="../assets/vendor/datatables-responsive/js/dataTables.responsive.js"></script>
+
+        <!-- PNotify -->
+        <script type="text/javascript" src="../assets/vendor/pnotify/pnotify.custom.min.js"></script>
+
+        <!-- Fuse Html -->
+        <script type="text/javascript" src="../assets/vendor/fuse-html/fuse-html.min.js"></script>
+
+        <!-- Main JS -->
+        <script type="text/javascript" src="../assets/js/main.js"></script>
+
+        <!-- / JAVASCRIPT -->
+    </head>
+
+    <body class="layout layout-vertical">
+        <div id="wrapper">
+
+            <div class="content-wrapper">
+
+                <div class="content">
+                    <div id="login" class="p-8">
+
+                        <div class="form-wrapper md-elevation-8 p-8">
+
+                            <div class="logo bg-primary">
+                                <span style="font-size: 5.6rem;">BWL</span>
+                            </div>
+
+                            <div class="title mt-4 mb-8">Log in to your account</div>
+
+                            <form name="loginForm" novalidate>
+
+                                <div class="form-group mb-4">
+                                    <input type="email" class="form-control" id="loginFormInputEmail"
+                                           aria-describedby="emailHelp"
+                                           placeholder=" "/>
+                                    <label for="loginFormInputEmail">Username</label>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <input type="password" class="form-control" id="loginFormInputPassword"
+                                           placeholder="Password"/>
+                                    <label for="loginFormInputPassword">Password</label>
+                                </div>
+
+                                <!--<div-->
+                                    <!--class="remember-forgot-password row no-gutters align-items-center justify-content-between pt-4">-->
+
+                                    <!--<div class="form-check remember-me mb-4">-->
+                                        <!--<label class="form-check-label">-->
+                                            <!--<input type="checkbox" class="form-check-input" aria-label="Remember Me"/>-->
+                                            <!--<span class="checkbox-icon"></span>-->
+                                            <!--<span class="form-check-description">Remember Me</span>-->
+                                        <!--</label>-->
+                                    <!--</div>-->
+
+                                    <!--<a href="#" class="forgot-password text-primary mb-4">Forgot Password?</a>-->
+                                <!--</div>-->
+
+
+                                <button type="reset" class="submit-button btn btn-block btn-primary my-4 mx-auto"
+                                        aria-label="LOG IN" onclick="setUser()">
+                                    LOG IN
+                                </button>
+
+                            </form>
+
+                            <!--<div class="separator">-->
+                                <!--<span class="text">OR</span>-->
+                            <!--</div>-->
+
+                            <!--<button type="submit" class="google btn btn-block btn-primary my-2 mx-auto"-->
+                                    <!--aria-label="LOG IN">-->
+                <!--<span>-->
+                    <!--<i class="icon-google-plus s-4"></i>-->
+                    <!--<span>Log in with Google</span>-->
+                <!--</span>-->
+                            <!--</button>-->
+
+                            <!--<button type="submit" class="facebook btn btn-block btn-primary my-2 mx-auto"-->
+                                    <!--aria-label="LOG IN">-->
+                <!--<span>-->
+                    <!--<i class="icon-facebook s-4"></i>-->
+                    <!--<span>Log in with Facebook</span>-->
+                <!--</span>-->
+                            <!--</button>-->
+
+                            <!--<div-->
+                                <!--class="register d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">-->
+                                <!--<span class="text mr-sm-2">Don't have an account?</span>-->
+                                <!--<a class="link text-primary" href="pages-auth-register.html">Create an account</a>-->
+                            <!--</div>-->
+
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="../assets/js/apps/login/auth.js"></script>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

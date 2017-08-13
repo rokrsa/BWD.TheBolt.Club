@@ -1,0 +1,378 @@
+/*----------------------------------------------------------------*/
+/*  Page Layouts
+/*----------------------------------------------------------------*/
+
+// Page Layouts
+$header-height: 20rem;
+$card-toolbar-height: 6.4rem;
+$card-header-height: $header-height - $card-toolbar-height;
+
+$header-height-xs: 16rem;
+$card-header-height-sm: $header-height-xs - $card-toolbar-height;
+
+.page-layout {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    // Global header styles
+    .page-header {
+        height: $header-height;
+        min-height: $header-height;
+        max-height: $header-height;
+
+        .breadcrumb {
+            font-weight: 500;
+            //color: rgba(0, 0, 0, 0.54);
+
+            md-icon {
+                margin: 0;
+            }
+
+            .separator {
+                margin: 0 8px;
+            }
+        }
+
+        .title {
+            font-size: 34px;
+        }
+    }
+
+    .page-content-wrapper {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .page-sidebar {
+        width: 22rem;
+        min-width: 22rem;
+        max-width: 22rem;
+        &:not(.fuse-bar){
+            z-index: 5;
+        }
+    }
+
+    .page-content {
+        z-index: 10;
+    }
+
+    // Carded layout
+    &.carded {
+        flex-direction: column;
+
+        .top-bg {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: $header-height;
+        }
+
+        .page-sidebar {
+            > .header {
+                height: $header-height;
+                min-height: $header-height;
+                max-height: $header-height;
+            }
+        }
+
+        .page-content {
+            padding: 0 3.2rem;
+
+            @include media-breakpoint-down(xs) {
+                padding: 0 1.6rem;
+            }
+
+            > .header {
+                height: $card-header-height;
+                min-height: $card-header-height;
+                max-height: $card-header-height;
+            }
+
+            > .page-content-card {
+                margin: 0;
+                background: white;
+                @include mdc-elevation(7);
+                flex: 1;
+
+                > .toolbar {
+                    //padding: 2.4rem;
+                    height: $card-toolbar-height;
+                    min-height: $card-toolbar-height;
+                    max-height: $card-toolbar-height;
+                    border-bottom: 1px solid rgba(0, 0, 0, .12);
+                }
+
+            }
+        }
+
+        &.left-sidebar,
+        &.right-sidebar {
+            .page-content-wrapper {
+                display: flex;
+                flex-direction: row;
+
+                .page-content {
+                    flex: 1;
+                }
+            }
+        }
+
+        // Fullwidth
+        &.fullwidth {
+        }
+
+        // Left sidenav
+        &.left-sidebar {
+            .page-content {
+                @include media-breakpoint-up('lg') {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        // Right sidenav
+        &.right-sidebar {
+            .page-content {
+                @include media-breakpoint-up('lg') {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    // Simple layout
+    &.simple {
+
+        .page-content {
+            //padding : 2.4rem;
+        }
+
+        // Fullwidth
+        &.full-width,
+        &.tabbed {
+            flex-direction: column;
+        }
+
+        &.left-sidebar,
+        &.right-sidebar {
+            display: flex;
+            flex-direction: row;
+
+            .page-content-wrapper {
+                @include mdc-elevation(7);
+            }
+        }
+
+        &.left-sidebar-inner,
+        &.right-sidebar-inner {
+            flex-direction: column;
+            .page-content-wrapper {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        &.left-sidebar-floating,
+        &.right-sidebar-floating {
+            flex-direction: column;
+            .page-content-wrapper {
+                display: flex;
+                flex-direction: row;
+
+                .page-sidebar {
+                    box-sizing: content-box;
+                    position: relative;
+
+                    .page-sidebar-card {
+                        @include mdc-elevation(1);
+                        background-color: #FFFFFF;
+                    }
+                }
+
+                @include media-breakpoint-down(md) {
+                    .page-sidebar {
+                        padding: 0 !important;
+                        .page-sidebar-card {
+                            box-shadow: none;
+                        }
+                    }
+                }
+
+                .page-content {
+                    flex: 1;
+                    display: flex;
+                }
+            }
+
+        }
+
+        &.left-sidebar {
+        }
+
+        // Right sidenav
+        &.right-sidebar {
+        }
+
+        &.tabbed {
+            //flex-direction : column;
+            .page-content {
+
+                > .nav-tabs {
+                    padding: 0 2.4rem;
+                    background-color: #FFFFFF;
+                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+                }
+                > .tab-content {
+                    padding: 2.4rem;
+                }
+            }
+        }
+    }
+    // Blank layout
+    &.blank {
+        min-height: 100%;
+    }
+}
+
+// RESPONSIVE
+@include media-breakpoint-down(md) {
+    .page-layout {
+
+        &.simple {
+
+            &.inner-sidenav {
+
+                &.right-sidenav, &.left-sidenav {
+
+                    > .content {
+                        height: auto !important;
+
+                        > md-sidenav {
+                            margin-left: 0;
+                            margin-right: 0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .sidenav-open {
+
+        .page-layout {
+
+            &.simple {
+
+                &.inner-sidenav {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .page-layout {
+
+        .top-bg {
+            height: $header-height-xs;
+        }
+
+        &.carded {
+
+            &.right-sidenav,
+            &.left-sidenav,
+            &.full-width {
+
+                > .center {
+                    margin-left: 16px;
+                    margin-right: 16px;
+
+                    .header {
+                        height: $card-header-height-sm;
+                        min-height: $card-header-height-sm;
+                        max-height: $card-header-height-sm;
+                    }
+                }
+            }
+
+            // Turn carded layouts into single-scroll
+            &.full-width {
+                height: auto;
+
+                > .center {
+
+                    .content-card {
+
+                        .content {
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+
+            &.right-sidenav,
+            &.left-sidenav {
+                height: auto;
+
+                > .center {
+
+                    .content-card {
+
+                        .content {
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.simple {
+
+            &.full-width,
+            &.inner-sidenav {
+
+                > .header {
+                    height: $header-height-xs;
+                    min-height: $header-height-xs;
+                    max-height: $header-height-xs;
+                }
+            }
+
+            &.right-sidenav,
+            &.left-sidenav {
+
+                > .center {
+
+                    .header {
+                        height: $header-height-xs;
+                        min-height: $header-height-xs;
+                        max-height: $header-height-xs;
+                    }
+                }
+            }
+        }
+
+        // Turn simple layouts into single-scroll
+        &.simple {
+
+            &.left-sidenav,
+            &.right-sidenav {
+                height: auto;
+
+                > .center {
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+}

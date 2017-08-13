@@ -1,0 +1,29 @@
+.pagination {
+    @include mdc-elevation(2);
+    display: inline-flex;
+
+    .page-link {
+        min-width: 4.8rem;
+        min-height: 5.6rem;
+        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        overflow: hidden !important;
+
+        &:focus, &:active {
+            background-color: transparent;
+            color: rgba(0, 0, 0, .54);
+        }
+    }
+
+    .page-item {
+        &:first-child,
+        &:last-child {
+            .page-link {
+                padding-left: 1.6rem;
+                padding-right: 1.6rem;
+            }
+        }
+    }
+}

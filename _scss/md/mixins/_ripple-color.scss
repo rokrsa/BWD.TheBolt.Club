@@ -1,0 +1,11 @@
+@mixin ripple-color($color,$suffix:'') {
+    &.fuse-ripple-ready {
+        .fuse-ripple {
+            @if (mdc-theme-light-or-dark($color) == 'light') {
+                background: rgba(255, 255, 255, 0.28)#{$suffix};
+            } @else {
+                background: rgba(0, 0, 0, 0.12)#{$suffix};
+            }
+        }
+    }
+}

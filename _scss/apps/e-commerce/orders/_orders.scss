@@ -1,0 +1,21 @@
+#e-commerce-orders {
+
+    .page-content {
+
+        > .header {
+
+            .search-wrapper {
+                max-width: 48rem;
+            }
+        }
+    }
+
+    #e-commerce-orders-table {
+
+        .product-image {
+            width: 5.2rem;
+            height: 5.2rem;
+            border: 1px solid rgba(0, 0, 0, .12);
+        }
+    }
+}

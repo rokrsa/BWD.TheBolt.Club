@@ -1,0 +1,163 @@
+@mixin fgStyles($style:'light', $prepend:'') {
+
+    $isLight: if($style == 'light', true, false);
+
+    color: if($isLight, $white-100#{$prepend}, $black-87#{$prepend});
+
+    a {
+        @include hover {
+            color: $link-hover-color;
+        }
+    }
+
+    i, [class^="icon-"], [class*=" icon-"] {
+        color: if($isLight, $white-87#{$prepend}, $black-54#{$prepend});
+    }
+
+    .text-muted {
+        color: if($isLight, $white-50, $black-38) !important;
+    }
+
+    .fuse-ripple-ready {
+        .fuse-ripple {
+            background: if($isLight, $white-28, $black-12);
+        }
+    }
+
+    .form-control {
+        color: if($isLight, $white-100, $black-87);
+        box-shadow: 0 1px 0 0 if($isLight, $white-70, $black-42);
+
+        &:hover {
+            box-shadow: 0 2px 0 0 if($isLight, $white-100, $black-87);
+        }
+
+        &:focus {
+            box-shadow: $input-box-shadow-focus;
+        }
+
+        &::placeholder {
+            color: if($isLight, $white-70, $black-54);
+        }
+
+    }
+
+    textarea {
+        &.form-control {
+            box-shadow: inset 0 0 0 1px if($isLight, $white-50, $black-12);
+
+            &:hover {
+                box-shadow: inset 0 0 0 2px if($isLight, $white-50, $black-12);
+            }
+
+            &:focus,
+            &:focus:hover {
+                box-shadow: inset 0 0 0 2px $brand-primary;
+            }
+        }
+    }
+
+    select.form-control {
+        background-image: if($isLight, mdc-select-dd-arrow-svg-bg_(ffffff, .50), mdc-select-dd-arrow-svg-bg_(000000, .38));
+
+        &[multiple], &[size] {
+            box-shadow: inset 0 0 0 1px if($isLight, $white-50, $black-12);
+
+            &:hover {
+                box-shadow: inset 0 0 0 2px if($isLight, $white-50, $black-12);
+            }
+
+            &:focus,
+            &:focus:hover {
+                box-shadow: inset 0 0 0 2px $brand-primary;
+            }
+        }
+    }
+
+    .form-group {
+        > label {
+            color: if($isLight, $white-70, $black-54);
+        }
+    }
+
+    .nav {
+        .subheader {
+            color: if($isLight, $white-50, $black-54);
+        }
+
+        .nav-link {
+            color: if($isLight, $white-100, $black-87);
+            &:hover {
+                color: $brand-primary;
+                > i {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+
+    .custom-checkbox,
+    .custom-radio,
+    .form-check-label {
+        input[type=radio] {
+            ~ .custom-control-indicator,
+            ~ .radio-icon {
+                &:before {
+                    border-color: if($isLight, $white-70, $black-54);
+                }
+            }
+        }
+        input[type=checkbox] {
+            ~ .custom-control-indicator,
+            ~ .checkbox-icon {
+                &:before {
+                    color: if($isLight, $white-70, $black-54);
+                }
+            }
+        }
+    }
+
+    input[type=checkbox] {
+        &:disabled, &[disabled] {
+            ~ .checkbox-icon,
+            ~ .custom-control-indicator,
+            ~ .form-check-description {
+                color: if($isLight, $white-50, $black-38) !important;
+            }
+        }
+    }
+
+    .form-check {
+        &.disabled {
+            .form-check-label {
+                color: if($isLight, $white-50, $black-38) !important;
+            }
+        }
+    }
+
+    .custom-control-input {
+        &:disabled {
+            ~ .custom-control-description {
+                color: if($isLight, $white-50, $black-54);
+            }
+        }
+    }
+
+    #sidenav .nav-link {
+        &:hover:not(.active) {
+            background: if($isLight, rgba(255, 255, 255, .1), rgba(0, 0, 0, .05)) !important;
+            > i {
+                color: if($isLight, $white-87, $black-54) !important;
+            }
+        }
+    }
+
+}
+
+@mixin autoText($color, $prepend:'') {
+    @if (mdc-theme-light-or-dark($color) == 'light') {
+        @include fgStyles('light', $prepend);
+    } @else {
+        @include fgStyles('dark', $prepend);
+    }
+}

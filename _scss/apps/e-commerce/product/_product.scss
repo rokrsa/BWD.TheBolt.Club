@@ -1,0 +1,21 @@
+#e-commerce-product {
+
+    > .page-header {
+        height: 12rem;
+        min-height: 12rem;
+        max-height: 12rem;
+    }
+
+    > .page-content {
+
+        #product-images-tab-pane {
+
+            .product-image {
+                position: relative;
+                width: 100px;
+                min-height: 100px;
+                border: 1px solid rgba(0,0,0,.12);
+            }
+        }
+    }
+}

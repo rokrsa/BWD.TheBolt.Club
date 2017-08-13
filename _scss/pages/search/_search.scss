@@ -1,0 +1,87 @@
+#search {
+
+    .page-header {
+
+        .search-bar {
+            max-width: 78rem;
+
+            .search-input {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    .tab-content {
+
+        .result-info {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+            .pager {
+
+                .page-info {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        #classic-tab-pane {
+
+            .results {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                max-width: 51.2rem;
+
+                .result-item {
+
+                    .title {
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+
+                    .url {
+                        color: #4CAF50;
+                    }
+
+                    .excerpt {
+                    }
+                }
+            }
+        }
+
+        #emails-tab-pane {
+
+            .results {
+
+                .result-item {
+                    position: relative;
+                    max-width: 78rem;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+                    .info {
+                        overflow: hidden;
+
+                        .name {
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        #users-tab-pane {
+
+        }
+
+        #contacts-tab-pane {
+
+        }
+    }
+}
+
+// RESPONSIVE
+@include media-breakpoint-down(sm) {
+
+    #search {
+
+    }
+}

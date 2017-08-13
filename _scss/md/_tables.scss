@@ -1,0 +1,13 @@
+.table {
+
+    th,
+    td {
+        padding: 1.6rem 1.2rem;
+        vertical-align: middle;
+    }
+
+    thead th {
+        border-bottom: 1px solid $table-border-color;
+        font-weight: 500;
+    }
+}

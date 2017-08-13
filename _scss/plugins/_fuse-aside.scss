@@ -1,0 +1,193 @@
+body {
+
+    #aside {
+        .aside-toolbar {
+            transition: padding 300ms ease;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &.layout-below-toolbar.layout-left-navigation.fuse-aside-collapsed {
+            #wrapper > .content-wrapper #toolbar {
+                left: 6.4rem !important;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &.layout-below-toolbar.layout-left-navigation {
+            #wrapper > .content-wrapper #toolbar {
+                left: 0 !important;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &.layout-below-toolbar.layout-right-navigation.fuse-aside-collapsed {
+            #wrapper > .content-wrapper #toolbar {
+                right: 6.4rem !important;
+
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &.layout-below-toolbar.layout-right-navigation {
+            #wrapper > .content-wrapper #toolbar {
+                right: 0 !important;
+            }
+        }
+    }
+
+    &.fuse-aside-collapsed {
+
+        #aside {
+
+            .aside-content-wrapper,
+            .aside-content-wrapper > .aside-content {
+                width: 6.4rem !important;
+                min-width: 6.4rem !important;
+            }
+
+            .aside-content-wrapper > .aside-content > .aside-toolbar {
+                padding-left: 1.6rem !important;
+            }
+
+            #sidenav {
+
+                .subheader {
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        min-width: 1.6rem;
+                        border-top: 2px solid rgba(0, 0, 0, .12);
+                    }
+
+                    > span {
+                        opacity: 0;
+                        transition: opacity 200ms ease;
+                    }
+                }
+
+                .nav-link {
+
+                    > span {
+                        opacity: 0;
+                        transition: opacity 200ms ease;
+                    }
+                }
+
+                .nav-item {
+
+                    .collapse.show {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.fuse-aside-expanded {
+
+        &.layout-left-navigation {
+
+            #aside {
+
+                .aside-content-wrapper {
+                    margin-left: 0rem;
+                }
+            }
+        }
+
+        &.layout-right-navigation {
+
+            #aside {
+
+                .aside-content-wrapper {
+                    margin-right: 0rem;
+                }
+            }
+        }
+
+        #sidenav {
+
+            .subheader {
+
+                > span {
+                    opacity: 1;
+                }
+            }
+
+            .nav-link {
+
+                > span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.fuse-aside-folded {
+
+        #aside {
+            width: 6.4rem;
+
+            .aside-content-wrapper {
+                position: absolute;
+            }
+        }
+    }
+
+    &.layout-left-navigation {
+
+        #aside {
+
+            .aside-content-wrapper {
+
+                > .aside-content {
+                    left: 0;
+                }
+            }
+        }
+
+        #toggle-fold-aside-button {
+            transform: rotate(0deg);
+        }
+
+        &.fuse-aside-folded {
+
+            #toggle-fold-aside-button {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &.layout-right-navigation {
+
+        #aside {
+
+            .aside-content-wrapper {
+
+                > .aside-content {
+                    right: 0;
+                }
+            }
+        }
+
+        #toggle-fold-aside-button {
+            transform: rotate(180deg);
+        }
+
+        &.fuse-aside-folded {
+            #toggle-fold-aside-button {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    #toggle-fold-aside-button {
+        transition: transform .3s ease-in-out .1s;
+    }
+}

@@ -1,0 +1,80 @@
+#todo {
+
+    .search-bar {
+        height: 5.6rem;
+        background: #FFFFFF;
+        @include mdc-elevation(7);
+
+        .sidebar-toggle-button {
+            width: 5.6rem;
+            height: 5.6rem;
+            border-radius: 0 !important;
+            border-right: 1px solid rgba(0, 0, 0, .12);
+        }
+
+        > i {
+        }
+
+        .search-bar-input {
+            height: 5.6rem;
+            color: rgba(0, 0, 0, 0.54);
+            border: none;
+            outline: none;
+        }
+    }
+
+    .todo-items {
+        background: #FAFAFA;
+
+        .todo-item {
+            border-bottom: 1px solid rgba(0, 0, 0, .08);
+
+            .tags {
+
+                .tag {
+                    background-color: rgba(0, 0, 0, 0.08);
+                    color: black;
+
+                    .tag-color {
+                        width: .8rem;
+                        height: .8rem;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            &.completed {
+                background: #EEEEEE;
+
+                .title,
+                .notes {
+                    color: rgba(0, 0, 0, 0.54);
+                    text-decoration: line-through;
+                }
+            }
+
+            &.selected {
+                background: #FFF8E1;
+            }
+
+            .info {
+
+                .title {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+            }
+
+            .buttons {
+
+                .icon-alert-circle {
+                    color: #E53935;
+                }
+
+                .icon-star {
+                    color: #FFC107;
+                }
+            }
+        }
+    }
+}

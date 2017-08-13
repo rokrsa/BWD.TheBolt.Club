@@ -1,0 +1,107 @@
+.layout {
+
+    #wrapper {
+
+        > .aside {
+            z-index: 1000;
+
+            > .aside-content-wrapper {
+                overflow: hidden;
+                width: $sidebarWidth;
+                min-width: $sidebarWidth;
+                height: 100%;
+                transition: all 300ms ease;
+                position: relative;
+
+                > .aside-content {
+                    @include mdc-elevation(4);
+                    background: white;
+                    position: fixed;
+                    height: 100%;
+                    width: $sidebarWidth;
+                    top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    transition: all 300ms ease;
+                    overflow: hidden;
+
+                    > .aside-toolbar {
+                        display: flex;
+                        padding-left: 2.4rem;
+                        padding-right: 1.6rem;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 6.4rem;
+                        min-height: 6.4rem;
+
+                        .logo {
+                            display: flex;
+                            align-items: center;
+
+                            .logo-icon {
+                                display: block;
+                                background: #039BE5;
+                                width: 32px;
+                                min-width: 32px;
+                                height: 32px;
+                                line-height: 32px;
+                                text-align: center;
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: #FFF;
+                                border-radius: 2px;
+                            }
+
+                            .logo-text {
+                                margin-left: 16px;
+                                font-size: 1.6rem;
+                            }
+                        }
+                    }
+
+                    > #sidenav {
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        flex-wrap: nowrap;
+
+                        .subheader {
+                            white-space: nowrap;
+                        }
+
+                        .nav-link {
+                            color: inherit;
+
+                            &:hover {
+                                background: rgba(0, 0, 0, .05);
+                                > i {
+                                    color: rgba(0, 0, 0, .54);
+                                }
+                            }
+
+                            &.active {
+                                background-color: $brand-primary;
+                                color: if(mdc-theme-light-or-dark($brand-primary) == 'light', $white-100, $black-87);
+
+                                > i {
+                                    color: if(mdc-theme-light-or-dark($brand-primary) == 'light', $white-100, $black-87);
+                                }
+                            }
+
+                            > span {
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .quick-panel-sidebar {
+            z-index: 1050;
+        }
+
+        .fuse-bar-backdrop-quick-panel-sidebar {
+            z-index: 1049;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import "md/main";
+@import "demo/main";
+/**
+Apps
+ */
+@import "apps/mail/mail";
+@import "apps/contacts/contacts";
+@import "apps/file-manager/file-manager";
+@import "apps/todo/todo";
+@import "apps/chat/chat";
+@import "apps/dashboards/project/project";
+@import "apps/dashboards/server/server";
+@import "apps/e-commerce/products/products";
+@import "apps/e-commerce/product/product";
+@import "apps/e-commerce/orders/orders";
+@import "apps/calendar/calendar";
+/**
+Pages
+ */
+@import "pages/profile/profile";
+@import "pages/auth/login";
+@import "pages/auth/login-v2";
+@import "pages/auth/register";
+@import "pages/auth/register-v2";
+@import "pages/auth/forgot-password";
+@import "pages/auth/reset-password";
+@import "pages/auth/lock-screen";
+@import "pages/coming-soon/coming-soon";
+@import "pages/maintenance/maintenance";
+@import "pages/errors/404/404";
+@import "pages/errors/500/500";
+@import "pages/search/search";
+/**
+Components
+ */
+@import "components/charts/nvd3/nvd3";
+/**
+Plugins
+ */
+@import "plugins/datatable";
+@import "plugins/responsive.dataTables";
+@import "plugins/fuse-aside";
+@import "plugins/custom-scrollbars";
+@import "plugins/nvd3";

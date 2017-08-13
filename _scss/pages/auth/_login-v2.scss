@@ -1,0 +1,160 @@
+#login-v2 {
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/backgrounds/march.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .intro {
+
+        .logo {
+            width: 12.8rem;
+            height: 12.8rem;
+            line-height: 12.8rem;
+            font-size: 8.6rem;
+            font-weight: 500;
+            color: #FFFFFF;
+            border-radius: 2px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 4.2rem;
+            font-weight: 300;
+        }
+
+        .description {
+            font-size: 1.4rem;
+            max-width: 60rem;
+        }
+    }
+
+    .form-wrapper {
+
+        .form-content {
+            width: 41.6rem;
+            max-width: 100%;
+
+            .title {
+            }
+
+            form {
+                width: 100%;
+                text-align: left;
+
+                .remember-forgot-password {
+
+                    .remember-me {
+                        font-size: 1.3rem;
+                    }
+
+                    .forgot-password {
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                    }
+                }
+
+                .submit-button {
+                }
+
+            }
+
+            .register {
+                font-weight: 500;
+                font-size: 1.3rem;
+
+                .text {
+                }
+
+                .link {
+                }
+            }
+
+            .separator {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin: 2.4rem auto 1.6rem auto;
+                position: relative;
+                overflow: hidden;
+                width: 10rem;
+                color: rgba(0, 0, 0, 0.54);
+                text-align: center;
+
+                .text {
+                    display: inline-block;
+                    vertical-align: baseline;
+                    position: relative;
+                    padding: 0 .8rem;
+                    z-index: 9999;
+
+                    &:before, &:after {
+                        content: '';
+                        display: block;
+                        width: 3rem;
+                        position: absolute;
+                        top: 1rem;
+                        border-top: 1px solid rgba(0, 0, 0, 0.12);
+                    }
+
+                    &:before {
+                        right: 100%;
+                    }
+
+                    &:after {
+                        left: 100%;
+                    }
+                }
+            }
+
+            .btn {
+
+                &.google,
+                &.facebook {
+                    width: 19.2rem;
+                    text-transform: none;
+                    color: #FFFFFF;
+                    font-size: 1.3rem;
+
+                    i {
+                        color: #FFFFFF;
+                        margin: 0 .8rem 0 0;
+                    }
+                }
+
+                &.google {
+                    background-color: #D73D32;
+                }
+
+                &.facebook {
+                    background-color: rgb(63, 92, 154);
+                }
+            }
+        }
+    }
+}
+
+// RESPONSIVE
+@include media-breakpoint-down(sm) {
+
+    #login-v2 {
+
+        .form-wrapper {
+
+            form {
+
+                .btn {
+                    width: 95%;
+                }
+            }
+
+            .btn {
+
+                &.google,
+                &.facebook {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+#error-500 {
+    flex: 1;
+
+    .content {
+        width: 90%;
+        max-width: 51.2rem;
+
+        .error-code {
+            font-weight: 500;
+        }
+
+        .message {
+        }
+
+        .sub-message {
+        }
+
+        .report-link {
+            font-size: 1.5rem;
+        }
+    }
+}

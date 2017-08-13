@@ -1,0 +1,125 @@
+/* @formatter:off */
+// {# @ Helpers: Absolute Position #}
+/* @formatter:on */
+@mixin alignments($br:'') {
+
+    .center-block#{$br} {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+
+    .left-block#{$br} {
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .right-block#{$br} {
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .auto-height#{$br} {
+        height: auto;
+    }
+
+    .auto-width#{$br} {
+        width: auto;
+    }
+
+    .pull-right#{$br} {
+        float: right !important;
+    }
+
+    .pull-left#{$br} {
+        float: left !important;
+    }
+
+    .inline-block#{$br} {
+        display: inline-block;
+    }
+
+    .a-align#{$br}-middle {
+        top: 50%;
+        transform: translate(0, -50%);
+        position: absolute !important;
+    }
+
+    .a-align#{$br}-middle-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute !important;
+        text-align: center;
+    }
+
+    .a-align#{$br}-middle-right {
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        position: absolute !important;
+    }
+
+    .a-align#{$br}-middle-left {
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        position: absolute !important;
+    }
+
+    .a-align#{$br}-top-left {
+        top: 0;
+        left: 0;
+        position: absolute !important;
+    }
+
+    .a-align#{$br}-top-center {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        position: absolute !important;
+        text-align: center;
+    }
+
+    .a-align#{$br}-top-right {
+        top: 0;
+        right: 0;
+        position: absolute !important;
+    }
+
+    .a-align#{$br}-bottom-left {
+        bottom: 0;
+        left: 0;
+        position: absolute !important;
+    }
+
+    .a-align#{$br}-bottom-center {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        position: absolute !important;
+        text-align: center;
+    }
+
+    .a-align#{$br}-bottom-right {
+        bottom: 0;
+        right: 0;
+        position: absolute !important;
+    }
+
+    .a-align#{$br}-bottom-left {
+        bottom: 0;
+        left: 0;
+        position: absolute !important;
+    }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @include alignments($infix);
+    }
+}

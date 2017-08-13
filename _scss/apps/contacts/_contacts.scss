@@ -1,0 +1,40 @@
+#contacts {
+
+    .page-header {
+        height: 7.6rem;
+        min-height: 7.6rem;
+        max-height: 7.6rem;
+
+        .search-wrapper {
+            max-width: 24rem;
+        }
+    }
+
+    .page-content-wrapper {
+
+        .page-content {
+            padding: 2.4rem 9rem 2.4rem 0;
+
+            .contacts-list {
+                width: 100%;
+
+                .contacts-list-header {
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                }
+
+                .contact-item {
+                    position: relative;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                    cursor: pointer;
+
+                    .actions {
+
+                        .icon-star {
+                            color: #FFC107;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

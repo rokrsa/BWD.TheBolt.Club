@@ -1,0 +1,39 @@
+#server-dashboard {
+
+    .page-content {
+
+        .widget-group {
+
+            .widget {
+
+                .widget-header {
+                    height: 5.5rem;
+                }
+
+                &.widget2,
+                &.widget3,
+                &.widget4,
+                &.widget5 {
+                    height: 170px;
+                    display: flex;
+                    flex-direction: column;
+                    .widget-content {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+
+        #widget1-main-chart {
+            height: 32rem;
+        }
+
+        #widget4-main-chart {
+            height: 5rem;
+        }
+
+        #widget6-main-chart {
+            height: 14rem;
+        }
+    }
+}

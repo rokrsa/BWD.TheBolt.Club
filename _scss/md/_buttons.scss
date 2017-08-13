@@ -1,0 +1,310 @@
+//
+// Base styles
+//
+
+.btn {
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: $input-btn-border-width solid transparent;
+    @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
+
+    position: relative;
+    min-width: 8.8rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    letter-spacing: 0.04em;
+
+    @include mdc-elevation(2);
+    @include mdc-elevation-transition;
+
+    // Share hover and focus styles
+    @include hover-focus {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        //box-shadow: $btn-focus-box-shadow;
+    }
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        @include mdc-elevation(0);
+        color: rgba(0, 0, 0, 0.26)!important;
+        background: rgba(0, 0, 0, 0.12)!important;
+        cursor: default;
+        pointer-events: none;
+        opacity: 1;
+    }
+
+    &:active,
+    &.active {
+        background-image: none;
+        outline: none;
+        //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+        @include mdc-elevation(8);
+    }
+
+    // Outline buttons
+    &[class*="btn-outline-"] {
+        border-width: 1px;
+        //line-height: 2.428571; // 34px
+
+        @include mdc-elevation(0);
+
+        &:focus,
+        &.focus {
+            @include mdc-elevation(0);
+        }
+
+        &:active,
+        &.active {
+            @include mdc-elevation(8);
+        }
+
+        &.btn-sm {
+            //line-height: 2.46154; // 32px
+        }
+
+        &.btn-lg {
+            //line-height: 2.25; // 36px
+        }
+    }
+
+    i,
+    [class^="icon-"],
+    [class*=" icon-"] {
+        vertical-align: middle;
+    }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+    pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+
+.btn-primary {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border-color);
+}
+
+.btn-secondary {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border-color);
+}
+
+.btn-info {
+    @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border-color);
+}
+
+.btn-success {
+    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border-color);
+}
+
+.btn-warning {
+    @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border-color);
+}
+
+.btn-danger {
+    @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border-color);
+}
+
+// Remove all backgrounds
+.btn-outline-primary {
+    @include button-outline-variant($btn-primary-bg, $btn-primary-color);
+}
+
+.btn-outline-secondary {
+    @include button-outline-variant($btn-secondary-border-color, $btn-secondary-color);
+}
+
+.btn-outline-info {
+    @include button-outline-variant($btn-info-bg, $btn-info-color);
+}
+
+.btn-outline-success {
+    @include button-outline-variant($btn-success-bg, $btn-success-color);
+}
+
+.btn-outline-warning {
+    @include button-outline-variant($btn-warning-bg, $btn-warning-color);
+}
+
+.btn-outline-danger {
+    @include button-outline-variant($btn-danger-bg, $btn-danger-color);
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+    font-weight: $font-weight-normal;
+    color: initial;
+    border-radius: 0;
+    min-width: 6.4rem;
+
+    &,
+    &:active,
+    &.active,
+    &:disabled {
+        background-color: transparent;
+        @include box-shadow(none);
+    }
+
+    &,
+    &:focus,
+    &:active {
+        border-color: transparent;
+    }
+
+    @include hover {
+        border-color: transparent;
+        background-color: rgba(0, 0, 0, .03);
+    }
+
+    @include hover-focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+        background-color: transparent;
+    }
+    &:disabled {
+        color: $btn-link-disabled-color;
+
+        @include hover-focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.btn-link,
+.btn-icon {
+    background-color: transparent;
+    text-decoration: none !important;
+    box-shadow: none;
+
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+
+    &:active,
+    &.active {
+        box-shadow: none;
+    }
+
+    &.disabled,
+    &:disabled {
+        background: transparent;
+    }
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+    @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+    height: $input-height-lg;
+    line-height: $input-height-lg;
+}
+
+.btn-sm {
+    @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+    height: $input-height-sm;
+    line-height: $input-height-sm;
+}
+
+.btn-icon {
+    background: transparent;
+    min-width: auto;
+    min-width: initial;
+    height: auto;
+    line-height: normal;
+    padding: .8rem;
+    border-radius: 100% !important;
+}
+
+.btn-fab {
+    line-height: 5.6rem;
+    width: 5.6rem;
+    min-width: 5.6rem;
+    height: 5.6rem;
+    min-height: 5.6rem;
+    overflow: hidden !important;
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    &.btn-sm {
+        line-height: 4rem;
+        width: 4rem;
+        min-width: 4rem;
+        height: 4rem;
+        min-height: 4rem;
+    }
+
+    i,
+    [class^="icon-"],
+    [class*=" icon-"] {
+        //margin: auto;
+        width: 100%;
+    }
+
+    i,
+    [class^="icon-"],
+    [class*=" icon-"] {
+
+        width: 100%;
+    }
+}
+
+//
+// Block button
+//
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+    margin-top: $btn-block-spacing-y;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}

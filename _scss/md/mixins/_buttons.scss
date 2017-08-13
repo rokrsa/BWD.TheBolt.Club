@@ -1,0 +1,101 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+    $active-background: darken($background, 10%);
+    $active-border: darken($border, 12%);
+
+    //color: $color;
+    @include autoText($background, '!important');
+
+    background-color: $background;
+    border-color: $border;
+    @include mdc-elevation(2);
+    @include mdc-elevation-transition;
+
+    // Hover and focus styles are shared
+    @include hover {
+        @include autoText($background);
+    }
+
+    &:focus,
+    &.focus {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        //@if $enable-shadows {
+        //    box-shadow: $btn-box-shadow, 0 0 0 2px rgba($border, .5);
+        //} @else {
+        //    box-shadow: 0 0 0 2px rgba($border, .5);
+        //}
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        background-color: $background;
+        border-color: $border;
+    }
+
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+        color: $color;
+        @include autoText($background);
+
+        background-color: $active-background;
+        background-image: none; // Remove the gradient for the pressed/active state
+        //border-color: $active-border;
+        @include mdc-elevation(8);
+    }
+
+    @include ripple-color($background, '!important');
+
+    //i, [class^="icon-"], [class*=" icon-"] {
+    //    @include autoText($background,'!important');
+    //}
+}
+
+@mixin button-outline-variant($color, $color-hover: #FFF) {
+    color: $color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $color;
+
+    @include hover {
+        //color: $color-hover;
+        @include autoText($color);
+        background-color: $color;
+        border-color: $color;
+    }
+
+    &:focus,
+    &.focus {
+        //box-shadow: 0 0 0 2px rgba($color, .5);
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $color;
+        background-color: transparent;
+    }
+
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+        //color: $color-hover;
+        @include autoText($color);
+        background-color: $color;
+        border-color: $color;
+    }
+
+    @include ripple-color($color);
+}
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+    @include border-radius($border-radius);
+}

@@ -1,0 +1,11 @@
+.custom-control-indicator {
+    pointer-events: initial;
+}
+
+.custom-select {
+    box-shadow: $input-box-shadow;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+

@@ -1,0 +1,148 @@
+#project-dashboard {
+
+    .page-header {
+        height: 16rem;
+        min-height: 16rem;
+        max-height: 16rem;
+
+        .project-selection {
+
+            .selected-project {
+                background: rgba(0, 0, 0, .12);
+                color: #FFF;
+            }
+
+            .project-selector {
+                margin-left: .1rem;
+                background: rgba(0, 0, 0, .12);
+                overflow: hidden;
+                i {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+    .page-content {
+
+        .nav-tabs {
+
+        }
+
+        .tab-content {
+
+            .widget-group {
+
+                .widget {
+
+                    .widget-header {
+                        height: 5.5rem;
+                    }
+                }
+            }
+
+            #home-tab-pane {
+
+                .widget-group {
+
+                    .widget {
+
+                        .widget-header {
+
+                        }
+
+                        .widget-content {
+
+                            .title {
+                                font-size: 7.2rem;
+                                line-height: 7.2rem;
+                            }
+
+                            .sub-title {
+                                font-weight: 500;
+                            }
+                        }
+                        .widget-footer {
+                        }
+                    }
+
+                }
+
+                #widget5-main-chart {
+                    height: 42rem;
+                }
+
+                #widget5-supporting-charts {
+
+                    .chart-wrapper {
+                        height: 5rem;
+                        svg {
+                        }
+                    }
+                }
+
+                #widget6-main-chart {
+                    height: 40rem;
+                }
+            }
+
+            #budget-summary-tab-pane {
+
+                #widget8-main-chart {
+                    height: 40rem;
+                }
+
+                #widget9-weeklySpent,
+                #widget9-totalSpent,
+                #widget9-remaining {
+                    .chart-wrapper {
+
+                        height: 5rem;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    .page-sidebar {
+        width: 25rem;
+        min-width: 25rem;
+        background: #EEE;
+
+        .widget-group {
+
+            .widget-now {
+
+                .widget-content {
+
+                    .month {
+                        font-size: 2.4rem;
+                    }
+
+                    .day {
+                        font-size: 7.2rem;
+                        line-height: 8.8rem;
+                    }
+
+                    .year {
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+            .widget-weather {
+
+                .today-weather {
+
+                    > span {
+                        font-weight: 300;
+                        font-size: 4.5rem;
+                        line-height: 6.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

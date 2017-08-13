@@ -1,0 +1,46 @@
+#profile {
+
+    .page-header {
+        height: 32rem;
+        min-height: 32rem;
+        max-height: 32rem;
+        background: url('/assets/images/backgrounds/march.jpg') 0 45% no-repeat;
+        background-size: 100% auto;
+    }
+
+    #timeline-tab-pane {
+        .timeline {
+            .timeline-item {
+                .post-media {
+                    iframe,
+                    .media-img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #photos-videos-tab-pane {
+
+        .period {
+
+            .period-media {
+
+                .media {
+                    position: relative;
+                    width: 200px;
+                    .title {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 10;
+                        background: rgba(0, 0, 0, .54);
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}

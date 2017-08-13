@@ -1,0 +1,25 @@
+.layout {
+
+    #wrapper {
+        display: flex;
+        min-height: 100vh;
+
+        > .content-wrapper {
+            display: flex;
+            min-height: 100%;
+            flex-direction: column;
+            width: 100%;
+
+
+            > .content {
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+
+                > .page-layout {
+                    flex: 1 0 auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+#file-manager {
+
+    .page-header {
+        position: relative;
+
+        .header-content {
+            height: 100%;
+
+            .breadcrumb {
+                margin: 0;
+            }
+        }
+
+        #add-file-button {
+            position: absolute;
+            left: 2.4rem;
+            bottom: -2.8rem;
+            z-index: 99;
+        }
+    }
+
+    .page-sidebar {
+        width: 32rem;
+        max-width: 90%;
+        background: #FFFFFF;
+
+        .sidebar-header {
+            height: $header-height;
+            min-height: $header-height;
+            max-height: $header-height;
+            padding: 2.4rem;
+        }
+
+        .sidebar-content {
+
+            .file-details {
+
+                .preview {
+                    height: 240px;
+                }
+
+                .offline-switch {
+                    border-top: 1px solid rgba(0, 0, 0, 0.12);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .page-content {
+        background-color: #FFFFFF;
+    }
+
+    .file-icon {
+
+        .icon-folder {
+
+            &:before {
+                color: #FFB300;
+            }
+        }
+
+        .icon-document {
+
+            &:before {
+                color: #1565C0;
+            }
+        }
+
+        .icon-spreadsheet {
+
+            &:before {
+                color: #4CAF50;
+            }
+        }
+    }
+
+    .list-view {
+
+        tr {
+
+            td {
+                padding: 0;
+                height: 7.5rem;
+                vertical-align: middle;
+            }
+        }
+
+        > thead {
+
+            tr {
+
+                th {
+                    padding: 1.6rem 0;
+
+                    &:first-child {
+                        border-bottom: none;
+                        width: 10.6rem;
+                    }
+                }
+            }
+        }
+
+        > tbody {
+
+            tr {
+                cursor: pointer;
+                outline: none;
+
+                &.selected {
+                    background: #E3F2FD;
+                }
+
+                td {
+                    border-bottom: none;
+
+                    &.file-icon {
+                        text-align: center;
+                    }
+
+                    &.name {
+                        font-weight: 500;
+                    }
+
+                    &.type {
+                        text-transform: capitalize;
+                    }
+
+                    &.owner {
+                        text-transform: capitalize;
+                    }
+
+                    &.last-modified {
+
+                    }
+
+                    &.show-details {
+                        text-align: center;
+                    }
+
+                    &.more {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

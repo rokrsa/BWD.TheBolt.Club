@@ -1,0 +1,14 @@
+.divider-vertical {
+    height: 2.4rem;
+    width: 0.1rem;
+    margin: 0 0.8rem;
+    background: $black-12;
+}
+
+.divider {
+    display: block;
+    border-top-width: 1px;
+    border-top-style: solid;
+    margin: 0;
+    border-top-color: rgba(0, 0, 0, 0.12);
+}

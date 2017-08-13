@@ -1,0 +1,19 @@
+i,
+[class^="icon-"],
+[class*=" icon-"] {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 2.4rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    width: 2.4rem;
+
+    @for $size from 2 through 32 {
+
+        &.s-#{$size} {
+            font-size: ($size*$spacer) !important;
+            width: ($size*$spacer) !important;
+            height: ($size*$spacer) !important;
+            line-height: ($size*$spacer) !important;
+        }
+    }
+}

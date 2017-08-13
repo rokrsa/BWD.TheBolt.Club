@@ -1,0 +1,48 @@
+$sidebarWidth: 25.6rem;
+$tollbarHeight: 6.4rem;
+
+html {
+    font-size: 62.5%;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    //height:100vh; /* fix IE11 */
+    min-height: 100%; /* fix IE11 */
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+#wrapper {
+    min-height: 100%;
+    flex:auto;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    //height:100vh; /* fix IE11 */
+    min-height: 100%; /* fix IE11 */
+}
+
+#wrapper {
+    min-height: 100%;
+    flex:auto;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+@import "layouts/general";
+@import "layouts/content";
+@import "layouts/sidebar";
+@import "layouts/toolbar";
+@import "layouts/vertical/layout-vertical";

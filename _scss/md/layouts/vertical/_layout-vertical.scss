@@ -1,0 +1,100 @@
+.layout.layout-vertical {
+
+    #wrapper {
+
+        > aside {
+        }
+
+        > .content-wrapper {
+            overflow: hidden;
+        }
+    }
+
+    &.layout-left-navigation {
+    }
+
+    &.layout-above-toolbar {
+
+        #toolbar {
+            z-index: 1030;
+        }
+
+        #wrapper {
+
+            > aside {
+                z-index: 1021;
+            }
+
+            #aside {
+
+                > .aside-content-wrapper {
+
+                    > .aside-content {
+                        margin-top: $tollbarHeight;
+                    }
+                }
+            }
+
+            > .content-wrapper {
+
+                > .content {
+                    margin-top: $tollbarHeight;
+                }
+            }
+        }
+    }
+
+    &.layout-below-toolbar {
+        #wrapper {
+
+            > aside {
+                z-index: 1030;
+            }
+
+            > .fuse-bar-backdrop.fuse-bar-backdrop-aside {
+                z-index: 1029;
+            }
+
+            > .content-wrapper {
+
+                #toolbar {
+                    z-index: 1020;
+                }
+
+                > .content {
+                    margin-top: $tollbarHeight;
+                }
+            }
+        }
+
+        &.layout-left-navigation {
+
+            #wrapper {
+
+                > .content-wrapper {
+                    flex: 1;
+
+                    #toolbar {
+                        left: $sidebarWidth;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &.layout-right-navigation {
+
+            #wrapper {
+
+                > .content-wrapper {
+                    flex: 1;
+
+                    #toolbar {
+                        right: $sidebarWidth;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

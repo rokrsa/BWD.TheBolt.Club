@@ -1,0 +1,26 @@
+.breadcrumb {
+    margin-bottom: 1.6rem;
+}
+
+.breadcrumb-item {
+
+    > a:hover {
+        text-decoration: none;
+    }
+
+    + .breadcrumb-item::before {
+        font-family: 'fuse-iconfont' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 2rem;
+        line-height: normal;
+        vertical-align: middle;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        //content : "#{$breadcrumb-divider}";
+    }
+}
