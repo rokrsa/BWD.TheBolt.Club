@@ -1353,9 +1353,22 @@
             url: "http://api.thebolt.club/admin/user/bikes",
             success: function(response) {
                 if (response) {
-                    data['widget6']['rideDistribution']['TW'] = response.TW;
-                    data['widget6']['rideDistribution']['LW'] = response.LW;
-                    data['widget6']['rideDistribution']['TD'] = response.TD;
+                    debugger;
+                    data['widget6']['rideDistribution']['TW'] = [];
+                    data['widget6']['rideDistribution']['LW'] = [];
+                    data['widget6']['rideDistribution']['TD'] = [];
+                    for(item in response){
+                        var tw={},lw={} ,td={} ;
+                        lw.label = td.label = tw.label=response[item].x;
+                        tw.value=response[item].value_L_W;
+                        lw.value=response[item].value_T_W;
+                        td.value=response[item].value_T_D;
+                        data['widget6']['rideDistribution']['TW'].push(tw);
+                        data['widget6']['rideDistribution']['LW'].push(lw);
+                        data['widget6']['rideDistribution']['TD'].push(td);
+
+                    }
+
                     var jsonData = data.widget6.rideDistribution[widget5Option];
 
                     updateData(ridesDistributionChart, jsonData, widget6D3);
