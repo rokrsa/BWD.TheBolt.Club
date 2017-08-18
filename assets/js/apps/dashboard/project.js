@@ -1169,7 +1169,7 @@
      */
     var widget6Option = 'TW';
     /*
-        Storing chart insctance and D3 for update 
+        Storing chart insctance and SVG for later updates 
     */
     var ridesDistributionChart, widget6D3;
     // Main Chart - Donut chart
@@ -1353,7 +1353,6 @@
             url: "http://api.thebolt.club/admin/user/bikes",
             success: function(response) {
                 if (response) {
-                    debugger;
                     data['widget6']['rideDistribution']['TW'] = response.TW;
                     data['widget6']['rideDistribution']['LW'] = response.LW;
                     data['widget6']['rideDistribution']['TD'] = response.TD;
@@ -1378,6 +1377,7 @@
             success: function(response) {
                 var thisWeek, lastWeek, tillDate;
 
+                //Parsing resposne if not null
                 if (response) {
                     for (item in response) {
                         rides_tracked = { key: "Riders", values: [] }
@@ -1426,8 +1426,6 @@
                 alert('Unable to load charts data. Please try again.');
             }
         });
-
-
     }
 
     getRidesTracked();

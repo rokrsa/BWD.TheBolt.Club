@@ -31,12 +31,18 @@ function getCards(){
                 $("#ride-images-count").text(jsonData.images_count);
                 $("#rides-tracked-count").text(jsonData.rides_tracked_count);
 
-                //Parse to Kth Notation
+
+                $("#registered_riders_mtd").text(jsonData.registered_riders_mtd);
+                $("#ride-images-mtd").text(jsonData.ride_images_mtd);
+                $("#checkins-mtd").text(jsonData.checkins_mtd);
+
+                //Parse to Kth Notation ride-images-mtd / checkins-mtd/ registered_riders_mtd
+                //checkins_mtd / ride_images_mtd /registered_riders_mtd
                 var distance_covered = parseInt(jsonData.distance_covered)
                 $("#total-distance").text(formatter(distance_covered) + ' Km');
                 return true;
             } else{
-                $("#registeredRiders").text("Loading...");
+                alert("Server busy. pLease try again later!")
                 return false;
             }
         },
