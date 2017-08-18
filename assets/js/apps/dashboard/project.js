@@ -1,13 +1,10 @@
-(function ()
-{
+(function() {
     var data = {
-        "widget5"      : {
-            "ridesTracked" : {
-                "TW": [
-                    {
-                        "key"   : "Riders",
-                        "values": [
-                            {
+        "widget5": {
+            "ridesTracked": {
+                "TW": [{
+                        "key": "Riders",
+                        "values": [{
                                 "x": "Mon",
                                 "y": 9
                             },
@@ -38,9 +35,8 @@
                         ]
                     },
                     {
-                        "key"   : "Rides Tracked",
-                        "values": [
-                            {
+                        "key": "Rides Tracked",
+                        "values": [{
                                 "x": "Mon",
                                 "y": 37
                             },
@@ -71,11 +67,9 @@
                         ]
                     }
                 ],
-                "LW": [
-                    {
-                        "key"   : "Riders",
-                        "values": [
-                            {
+                "LW": [{
+                        "key": "Riders",
+                        "values": [{
                                 "x": "Mon",
                                 "y": 12
                             },
@@ -106,9 +100,8 @@
                         ]
                     },
                     {
-                        "key"   : "Rides Tracked",
-                        "values": [
-                            {
+                        "key": "Rides Tracked",
+                        "values": [{
                                 "x": "Mon",
                                 "y": 37
                             },
@@ -139,11 +132,9 @@
                         ]
                     }
                 ],
-                "TD": [
-                    {
-                        "key"   : "Riders",
-                        "values": [
-                            {
+                "TD": [{
+                        "key": "Riders",
+                        "values": [{
                                 "x": "Mon",
                                 "y": 11
                             },
@@ -174,9 +165,8 @@
                         ]
                     },
                     {
-                        "key"   : "Rides Tracked",
-                        "values": [
-                            {
+                        "key": "Rides Tracked",
+                        "values": [{
                                 "x": "Mon",
                                 "y": 42
                             },
@@ -209,10 +199,9 @@
                 ]
             }
         },
-        "widget6"      : {
-            "rideDistribution"  : {
-                "TD": [
-                    {
+        "widget6": {
+            "rideDistribution": {
+                "TD": [{
                         "label": "Frontend",
                         "value": 18
                     },
@@ -229,8 +218,7 @@
                         "value": 25
                     }
                 ],
-                "LW": [
-                    {
+                "LW": [{
                         "label": "Himalayan",
                         "value": 19
                     },
@@ -247,8 +235,7 @@
                         "value": 23
                     }
                 ],
-                "TW": [
-                    {
+                "TW": [{
                         "label": "Himalayan",
                         "value": 15
                     },
@@ -267,81 +254,77 @@
                 ]
             }
         },
-        "widget7"      : {
-            "title"   : "Schedule",
-            "ranges"  : {
-                "T" : "Today",
+        "widget7": {
+            "title": "Schedule",
+            "ranges": {
+                "T": "Today",
                 "TM": "Tomorrow"
-            }
-            ,
+            },
             "schedule": {
-                "T" : [
-                    {
-                        "title"   : "Group Meeting",
-                        "time"    : "In 32 minutes",
+                "T": [{
+                        "title": "Group Meeting",
+                        "time": "In 32 minutes",
                         "location": "Room 1B"
                     },
                     {
                         "title": "Coffee Break",
-                        "time" : "10:30 AM"
+                        "time": "10:30 AM"
                     },
                     {
                         "title": "Public Beta Release",
-                        "time" : "11:00 AM"
+                        "time": "11:00 AM"
                     },
                     {
                         "title": "Lunch",
-                        "time" : "12:10 PM"
+                        "time": "12:10 PM"
                     },
                     {
                         "title": "Dinner with David",
-                        "time" : "17:30 PM"
+                        "time": "17:30 PM"
                     },
                     {
                         "title": "Jane's Birthday Party",
-                        "time" : "19:30 PM"
+                        "time": "19:30 PM"
                     },
                     {
                         "title": "Overseer's Retirement Party",
-                        "time" : "21:30 PM"
+                        "time": "21:30 PM"
                     }
                 ],
-                "TM": [
-                    {
+                "TM": [{
                         "title": "Marketing Meeting",
-                        "time" : "09:00 AM"
+                        "time": "09:00 AM"
                     },
                     {
                         "title": "Public Announcement",
-                        "time" : "11:00 AM"
+                        "time": "11:00 AM"
                     },
                     {
                         "title": "Lunch",
-                        "time" : "12:10 PM"
+                        "time": "12:10 PM"
                     },
                     {
                         "title": "Meeting with Beta Testers",
-                        "time" : "15:00 AM"
+                        "time": "15:00 AM"
                     },
                     {
                         "title": "Live Stream",
-                        "time" : "17:30 PM"
+                        "time": "17:30 PM"
                     },
                     {
                         "title": "Release Party",
-                        "time" : "19:30 PM"
+                        "time": "19:30 PM"
                     },
                     {
                         "title": "CEO's Party",
-                        "time" : "22:30 PM"
+                        "time": "22:30 PM"
                     }
                 ]
             }
         },
-        "widget8"      : {
-            "title"    : "Budget Distribution",
-            "mainChart": [
-                {
+        "widget8": {
+            "title": "Budget Distribution",
+            "mainChart": [{
                     "label": "Wireframing",
                     "value": 12
                 },
@@ -363,14 +346,14 @@
                 }
             ]
         },
-        "widget9"      : {
-            "title"         : "Spent",
-            "ranges"        : {
+        "widget9": {
+            "title": "Spent",
+            "ranges": {
                 "TW": "This Week",
                 "LW": "Last Week",
                 "2W": "2 Weeks Ago"
             },
-            "weeklySpent"   : {
+            "weeklySpent": {
                 "title": "WEEKLY SPENT",
                 "count": {
                     "2W": "2,682.85",
@@ -378,114 +361,105 @@
                     "TW": "3,630.15"
                 },
                 "chart": {
-                    "2W": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 6
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 1
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 3
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 2
-                                }
-                            ]
-                        }
-                    ],
-                    "LW": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 6
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 1
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 3
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 4
-                                }
-                            ]
-                        }
-                    ],
-                    "TW": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 6
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 3
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 6
-                                }
-                            ]
-                        }
-                    ]
+                    "2W": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 6
+                            },
+                            {
+                                "x": 1,
+                                "y": 1
+                            },
+                            {
+                                "x": 2,
+                                "y": 3
+                            },
+                            {
+                                "x": 3,
+                                "y": 4
+                            },
+                            {
+                                "x": 4,
+                                "y": 5
+                            },
+                            {
+                                "x": 5,
+                                "y": 5
+                            },
+                            {
+                                "x": 6,
+                                "y": 2
+                            }
+                        ]
+                    }],
+                    "LW": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 4
+                            },
+                            {
+                                "x": 1,
+                                "y": 6
+                            },
+                            {
+                                "x": 2,
+                                "y": 2
+                            },
+                            {
+                                "x": 3,
+                                "y": 2
+                            },
+                            {
+                                "x": 4,
+                                "y": 1
+                            },
+                            {
+                                "x": 5,
+                                "y": 3
+                            },
+                            {
+                                "x": 6,
+                                "y": 4
+                            }
+                        ]
+                    }],
+                    "TW": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 2
+                            },
+                            {
+                                "x": 1,
+                                "y": 6
+                            },
+                            {
+                                "x": 2,
+                                "y": 5
+                            },
+                            {
+                                "x": 3,
+                                "y": 4
+                            },
+                            {
+                                "x": 4,
+                                "y": 5
+                            },
+                            {
+                                "x": 5,
+                                "y": 3
+                            },
+                            {
+                                "x": 6,
+                                "y": 6
+                            }
+                        ]
+                    }]
                 }
             },
-            "totalSpent"    : {
+            "totalSpent": {
                 "title": "TOTAL SPENT",
                 "count": {
                     "2W": "29,682.85",
@@ -493,114 +467,105 @@
                     "TW": "34,758.34"
                 },
                 "chart": {
-                    "2W": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 3
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 7
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 7
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 4
-                                }
-                            ]
-                        }
-                    ],
-                    "LW": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 7
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 8
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 8
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 6
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 1
-                                }
-                            ]
-                        }
-                    ],
-                    "TW": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 6
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 3
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 7
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 7
-                                }
-                            ]
-                        }
-                    ]
+                    "2W": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 3
+                            },
+                            {
+                                "x": 1,
+                                "y": 2
+                            },
+                            {
+                                "x": 2,
+                                "y": 2
+                            },
+                            {
+                                "x": 3,
+                                "y": 4
+                            },
+                            {
+                                "x": 4,
+                                "y": 7
+                            },
+                            {
+                                "x": 5,
+                                "y": 7
+                            },
+                            {
+                                "x": 6,
+                                "y": 4
+                            }
+                        ]
+                    }],
+                    "LW": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 5
+                            },
+                            {
+                                "x": 1,
+                                "y": 7
+                            },
+                            {
+                                "x": 2,
+                                "y": 8
+                            },
+                            {
+                                "x": 3,
+                                "y": 8
+                            },
+                            {
+                                "x": 4,
+                                "y": 6
+                            },
+                            {
+                                "x": 5,
+                                "y": 4
+                            },
+                            {
+                                "x": 6,
+                                "y": 1
+                            }
+                        ]
+                    }],
+                    "TW": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 6
+                            },
+                            {
+                                "x": 1,
+                                "y": 3
+                            },
+                            {
+                                "x": 2,
+                                "y": 7
+                            },
+                            {
+                                "x": 3,
+                                "y": 5
+                            },
+                            {
+                                "x": 4,
+                                "y": 5
+                            },
+                            {
+                                "x": 5,
+                                "y": 4
+                            },
+                            {
+                                "x": 6,
+                                "y": 7
+                            }
+                        ]
+                    }]
                 }
             },
-            "remaining"     : {
+            "remaining": {
                 "title": "REMAINING",
                 "count": {
                     "2W": "94.317,15",
@@ -608,127 +573,117 @@
                     "TW": "89.241,66"
                 },
                 "chart": {
-                    "2W": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 1
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 7
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 8
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 4
-                                }
-                            ]
-                        }
-                    ],
-                    "LW": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 3
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 1
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 8
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 8
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 4
-                                }
-                            ]
-                        }
-                    ],
-                    "TW": [
-                        {
-                            "label" : "Weekly Spent",
-                            "values": [
-                                {
-                                    "x": 0,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 1,
-                                    "y": 4
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 8
-                                },
-                                {
-                                    "x": 3,
-                                    "y": 6
-                                },
-                                {
-                                    "x": 4,
-                                    "y": 2
-                                },
-                                {
-                                    "x": 5,
-                                    "y": 5
-                                },
-                                {
-                                    "x": 6,
-                                    "y": 1
-                                }
-                            ]
-                        }
-                    ]
+                    "2W": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 1
+                            },
+                            {
+                                "x": 1,
+                                "y": 4
+                            },
+                            {
+                                "x": 2,
+                                "y": 5
+                            },
+                            {
+                                "x": 3,
+                                "y": 7
+                            },
+                            {
+                                "x": 4,
+                                "y": 8
+                            },
+                            {
+                                "x": 5,
+                                "y": 2
+                            },
+                            {
+                                "x": 6,
+                                "y": 4
+                            }
+                        ]
+                    }],
+                    "LW": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 3
+                            },
+                            {
+                                "x": 1,
+                                "y": 2
+                            },
+                            {
+                                "x": 2,
+                                "y": 1
+                            },
+                            {
+                                "x": 3,
+                                "y": 4
+                            },
+                            {
+                                "x": 4,
+                                "y": 8
+                            },
+                            {
+                                "x": 5,
+                                "y": 8
+                            },
+                            {
+                                "x": 6,
+                                "y": 4
+                            }
+                        ]
+                    }],
+                    "TW": [{
+                        "label": "Weekly Spent",
+                        "values": [{
+                                "x": 0,
+                                "y": 2
+                            },
+                            {
+                                "x": 1,
+                                "y": 4
+                            },
+                            {
+                                "x": 2,
+                                "y": 8
+                            },
+                            {
+                                "x": 3,
+                                "y": 6
+                            },
+                            {
+                                "x": 4,
+                                "y": 2
+                            },
+                            {
+                                "x": 5,
+                                "y": 5
+                            },
+                            {
+                                "x": 6,
+                                "y": 1
+                            }
+                        ]
+                    }]
                 }
             },
             "totalRemaining": {
                 "title": "TOTAL BUDGET",
                 "count": "124.000,00"
             },
-            "totalBudget"   : {
+            "totalBudget": {
                 "title": "TOTAL BUDGET",
                 "count": "124.000,00"
             }
         },
-        "widget10"     : {
+        "widget10": {
             "title": "Budget Details",
             "table": {
-                "columns": [
-                    {
+                "columns": [{
                         "title": "Budget Type"
                     },
                     {
@@ -747,175 +702,169 @@
                         "title": "Remaining (%)"
                     }
                 ],
-                "rows"   : [
-                    [
-                        {
-                            "value"  : "Wireframing",
+                "rows": [
+                    [{
+                            "value": "Wireframing",
                             "classes": "badge badge-primary",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$14,880.00",
+                            "value": "$14,880.00",
                             "classes": "text-bold",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$14,000.00",
+                            "value": "$14,000.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%94.08",
+                            "value": "%94.08",
                             "classes": "text-success",
-                            "icon"   : "icon-trending-up text-success"
+                            "icon": "icon-trending-up text-success"
                         },
                         {
-                            "value"  : "$880.00",
+                            "value": "$880.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%5.92",
+                            "value": "%5.92",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         }
                     ],
-                    [
-                        {
-                            "value"  : "Design",
+                    [{
+                            "value": "Design",
                             "classes": "badge badge-success",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$21,080.00",
+                            "value": "$21,080.00",
                             "classes": "text-bold",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$17,240.34",
+                            "value": "$17,240.34",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%81.78",
+                            "value": "%81.78",
                             "classes": "text-success",
-                            "icon"   : "icon-trending-up text-success"
+                            "icon": "icon-trending-up text-success"
                         },
                         {
-                            "value"  : "$3,839.66",
+                            "value": "$3,839.66",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%18.22",
+                            "value": "%18.22",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         }
                     ],
-                    [
-                        {
-                            "value"  : "Coding",
+                    [{
+                            "value": "Coding",
                             "classes": "badge badge-warning",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$34,720.00",
+                            "value": "$34,720.00",
                             "classes": "text-bold",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$3,518.00",
+                            "value": "$3,518.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%10.13",
+                            "value": "%10.13",
                             "classes": "text-danger",
-                            "icon"   : "icon-trending-down text-danger"
+                            "icon": "icon-trending-down text-danger"
                         },
                         {
-                            "value"  : "$31,202.00",
+                            "value": "$31,202.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%89.87",
+                            "value": "%89.87",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         }
                     ],
-                    [
-                        {
-                            "value"  : "Marketing",
+                    [{
+                            "value": "Marketing",
                             "classes": "badge badge-info",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$34,720.00",
+                            "value": "$34,720.00",
                             "classes": "text-bold",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$0.00",
+                            "value": "$0.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%0.00",
+                            "value": "%0.00",
                             "classes": "text-info",
-                            "icon"   : "icon-minus text-info"
+                            "icon": "icon-minus text-info"
                         },
                         {
-                            "value"  : "$34,720.00",
+                            "value": "$34,720.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%100.00",
+                            "value": "%100.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         }
                     ],
-                    [
-                        {
-                            "value"  : "Extra",
+                    [{
+                            "value": "Extra",
                             "classes": "badge badge-danger",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$18,600.00",
+                            "value": "$18,600.00",
                             "classes": "text-bold",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "$0.00",
+                            "value": "$0.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%0.00",
+                            "value": "%0.00",
                             "classes": "text-info",
-                            "icon"   : "icon-minus text-info"
+                            "icon": "icon-minus text-info"
                         },
                         {
-                            "value"  : "$34,720.00",
+                            "value": "$34,720.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         },
                         {
-                            "value"  : "%100.00",
+                            "value": "%100.00",
                             "classes": "",
-                            "icon"   : ""
+                            "icon": ""
                         }
                     ]
                 ]
             }
         },
-        "widget11"     : {
+        "widget11": {
             "title": "Team Members",
             "table": {
-                "columns": [
-                    {
+                "columns": [{
                         "title": ""
                     },
                     {
@@ -934,7 +883,7 @@
                         "title": "Phone"
                     }
                 ],
-                "rows"   : [
+                "rows": [
                     [
                         "james.jpg",
                         "Jack Gilbert",
@@ -1099,24 +1048,21 @@
             }
         },
         "weatherWidget": {
-            "locations"      : {
+            "locations": {
                 "NewYork": {
-                    "name"           : "Hello world",
-                    "icon"           : "icon-weather-pouring",
-                    "temp"           : {
+                    "name": "Hello world",
+                    "icon": "icon-weather-pouring",
+                    "temp": {
                         "C": "22",
                         "F": "72"
-                    }
-                    ,
-                    "windSpeed"      : {
+                    },
+                    "windSpeed": {
                         "KMH": 12,
                         "MPH": 7.5
-                    }
-                    ,
-                    "windDirection"  : "NW",
+                    },
+                    "windDirection": "NW",
                     "rainProbability": "98%",
-                    "next3Days"      : [
-                        {
+                    "next3Days": [{
                             "name": "Sunday",
                             "icon": "icon-weather-pouring",
                             "temp": {
@@ -1142,75 +1088,70 @@
                         }
                     ]
                 }
-            }
-            ,
+            },
             "currentLocation": "NewYork",
-            "tempUnit"       : "C",
-            "speedUnit"      : "KMH"
+            "tempUnit": "C",
+            "speedUnit": "KMH"
         }
     };
 
+    // function initWidget5() {
     /**
      * Rides Tracked Bar Graph
      */
     var widget5Option = 'TW';
+    /*
+        Storing chart insctance and D3 for update 
+    */
+    var ridesChart, ridesChartD3;
     // Main Chart
-    nv.addGraph(function ()
-    {
-        var chart = nv.models.multiBarChart()
-            .options(
-                {
-                    color       : ['#03a9f4', '#b3e5fc'],
-                    margin      : {
-                        top   : 48,
-                        right : 16,
-                        bottom: 16,
-                        left  : 32
-                    },
-                    clipEdge    : true,
-                    groupSpacing: 0.3,
-                    reduceXTicks: false,
-                    stacked     : false,
-                    duration    : 250,
-                    x           : function (d)
-                    {
-                        return d.x;
-                    },
-                    y           : function (d)
-                    {
-                        return d.y;
-                    },
-                    yTickFormat : function (d)
-                    {
-                        return d;
-                    }
+    nv.addGraph(function() {
+        ridesChart = nv.models.multiBarChart()
+            .options({
+                color: ['#03a9f4', '#b3e5fc'],
+                margin: {
+                    top: 48,
+                    right: 16,
+                    bottom: 16,
+                    left: 32
+                },
+                clipEdge: true,
+                groupSpacing: 0.3,
+                reduceXTicks: false,
+                stacked: false,
+                duration: 250,
+                x: function(d) {
+                    return d.x;
+                },
+                y: function(d) {
+                    return d.y;
+                },
+                yTickFormat: function(d) {
+                    return d;
                 }
-            );
+            });
 
-        var chartd3 = d3.select('#widget5-main-chart svg')
+        ridesChartD3 = d3.select('#widget5-main-chart svg');
         var chartData;
 
         initChart();
 
-        nv.utils.windowResize(chart.update);
+        nv.utils.windowResize(ridesChart.update);
 
-        $(window).bind('update:widget5', function ()
-        {
+        $(window).bind('update:widget5', function() {
             initChart();
         })
 
-        function initChart()
-        {
+        function initChart() {
             chartData = data.widget5.ridesTracked[widget5Option];
-            chartd3.datum(chartData).call(chart);
+            ridesChartD3.datum(chartData).call(ridesChart);
         }
 
-        return chart;
+        return ridesChart;
     });
+    // }
 
-
-    $('.widget5-option-change-btn').on('click', function (ev)
-    {
+    $('.widget5-option-change-btn').on('click', function(ev) {
         $('.widget5-option-change-btn').removeClass('btn-danger');
         $('.widget5-option-change-btn').removeClass('btn-link');
         $('.widget5-option-change-btn').addClass('btn-link');
@@ -1221,61 +1162,61 @@
         $(window).trigger('update:widget5');
     });
 
+
+    // function initWidget6() {
     /**
      * Ride Distribution vs Bike Models
      */
     var widget6Option = 'TW';
+    /*
+        Storing chart insctance and D3 for update 
+    */
+    var ridesDistributionChart, widget6D3;
     // Main Chart - Donut chart
-    nv.addGraph(function ()
-    {
-        var chart = nv.models.pieChart()
+    nv.addGraph(function() {
+        ridesDistributionChart = nv.models.pieChart()
             .options({
-                color       : ['#f44336', '#9c27b0', '#03a9f4', '#e91e63'],
-                margin      : {
-                    top   : 0,
-                    right : 0,
+                color: ['#f44336', '#9c27b0', '#03a9f4', '#e91e63'],
+                margin: {
+                    top: 0,
+                    right: 0,
                     bottom: 0,
-                    left  : 0
+                    left: 0
                 },
-                donut       : true,
-                clipEdge    : true,
+                donut: true,
+                clipEdge: true,
                 cornerRadius: 0,
-                labelType   : 'percent',
-                padAngle    : 0.02,
-                x           : function (d)
-                {
+                labelType: 'percent',
+                padAngle: 0.02,
+                x: function(d) {
                     return d.label;
                 },
-                y           : function (d)
-                {
+                y: function(d) {
                     return d.value;
                 }
             });
 
-        var chartd3 = d3.select('#widget6-main-chart svg');
+        widget6D3 = d3.select('#widget6-main-chart svg');
         var chartData;
 
         initChart();
 
-        nv.utils.windowResize(chart.update);
+        nv.utils.windowResize(ridesDistributionChart.update);
 
-        $(window).bind('update:widget6', function ()
-        {
+        $(window).bind('update:widget6', function() {
             initChart();
         })
 
-        function initChart()
-        {
-            chartData = data.widget6.rideDistribution[widget6Option];
-            chartd3.datum(chartData).call(chart);
+        function initChart() {
+            ridesDistributionChartData = data.widget6.rideDistribution[widget6Option];
+            widget6D3.datum(ridesDistributionChartData).call(ridesDistributionChart);
         }
 
-        return chart;
+        return ridesDistributionChart;
     });
 
-
-    $('#widget6-option-select').on('change', function (ev)
-    {
+    // }
+    $('#widget6-option-select').on('change', function(ev) {
         console.log($(ev.target).val());
         widget6Option = $(ev.target).val();
         $(window).trigger('update:widget6');
@@ -1287,24 +1228,21 @@
      */
 
     // Main Chart - Donut chart
-    nv.addGraph(function ()
-    {
+    nv.addGraph(function() {
         var chart = nv.models.pieChart()
             .options({
-                color    : ['#f44336', '#9c27b0', '#03a9f4', '#e91e63', '#ffc107'],
-                margin   : {
-                    top   : 0,
-                    right : 0,
+                color: ['#f44336', '#9c27b0', '#03a9f4', '#e91e63', '#ffc107'],
+                margin: {
+                    top: 0,
+                    right: 0,
                     bottom: 0,
-                    left  : 0
+                    left: 0
                 },
                 labelType: 'percent',
-                x        : function (d)
-                {
+                x: function(d) {
                     return d.label;
                 },
-                y        : function (d)
-                {
+                y: function(d) {
                     return d.value;
                 }
             });
@@ -1316,13 +1254,11 @@
 
         nv.utils.windowResize(chart.update);
 
-        $(window).bind('update:widget8', function ()
-        {
+        $(window).bind('update:widget8', function() {
             initChart();
         })
 
-        function initChart()
-        {
+        function initChart() {
             chartData = data.widget8.mainChart;
             chartd3.datum(chartData).call(chart);
         }
@@ -1336,40 +1272,34 @@
      */
     var widget9Option = 'TW';
 
-    $.each(['weeklySpent', 'totalSpent', 'remaining'], function (index, id)
-    {
-        nv.addGraph(function ()
-        {
+    $.each(['weeklySpent', 'totalSpent', 'remaining'], function(index, id) {
+        nv.addGraph(function() {
             var chart = nv.models.lineChart()
-                .options(
-                    {
-                        color                  : ['#03A9F4'],
-                        height                 : 50,
-                        margin                 : {
-                            top   : 8,
-                            right : 0,
-                            bottom: 0,
-                            left  : 0
-                        },
-                        isArea                 : true,
-                        interpolate            : 'cardinal',
-                        clipEdge               : true,
-                        duration               : 500,
-                        showXAxis              : false,
-                        showYAxis              : false,
-                        showLegend             : false,
-                        useInteractiveGuideline: true,
-                        x                      : function (d)
-                        {
-                            return d.x;
-                        },
-                        y                      : function (d)
-                        {
-                            return d.y;
-                        },
-                        yDomain                : [0, 9]
-                    }
-                );
+                .options({
+                    color: ['#03A9F4'],
+                    height: 50,
+                    margin: {
+                        top: 8,
+                        right: 0,
+                        bottom: 0,
+                        left: 0
+                    },
+                    isArea: true,
+                    interpolate: 'cardinal',
+                    clipEdge: true,
+                    duration: 500,
+                    showXAxis: false,
+                    showYAxis: false,
+                    showLegend: false,
+                    useInteractiveGuideline: true,
+                    x: function(d) {
+                        return d.x;
+                    },
+                    y: function(d) {
+                        return d.y;
+                    },
+                    yDomain: [0, 9]
+                });
 
             var chartd3 = d3.select('#widget9-' + id + ' svg');
             var chartData;
@@ -1378,14 +1308,12 @@
 
             nv.utils.windowResize(chart.update);
 
-            $(window).bind('update:widget9', function ()
-            {
+            $(window).bind('update:widget9', function() {
                 initChart();
                 $('#widget9-' + id + ' .item-value').text(data.widget9[id].count[widget9Option]);
             })
 
-            function initChart()
-            {
+            function initChart() {
                 chartData = data.widget9[id].chart[widget9Option];
                 chartd3.datum(chartData).call(chart);
             }
@@ -1394,10 +1322,114 @@
         });
     });
 
-    $('#widget9-option-select').on('change', function (ev)
-    {
+    $('#widget9-option-select').on('change', function(ev) {
         console.log($(ev.target).val());
         widget9Option = $(ev.target).val();
         $(window).trigger('update:widget9');
     });
+
+    // @modifiedby - Vasu Sheoran
+
+
+    /*
+        This function updates a chart instnce
+        @param chartInstance
+        @param data : data to be updated
+        @param chartD3
+        */
+    function updateData(chartInstance, data, chartD3) {
+        // Update the SVG with the new data and call chart
+        chartD3.datum(data).transition().duration(500).call(chartInstance);
+        nv.utils.windowResize(chartInstance.update);
+    };
+
+    /*
+        Ajax call to get data for widget6
+    */
+    function getRideDistribution() {
+
+        jQuery.ajax({
+            type: "GET",
+            url: "http://api.thebolt.club/admin/user/bikes",
+            success: function(response) {
+                if (response) {
+                    debugger;
+                    data['widget6']['rideDistribution']['TW'] = response.TW;
+                    data['widget6']['rideDistribution']['LW'] = response.LW;
+                    data['widget6']['rideDistribution']['TD'] = response.TD;
+                    var jsonData = data.widget6.rideDistribution[widget5Option];
+
+                    updateData(ridesDistributionChart, jsonData, widget6D3);
+                }
+            },
+            error: function(errorObject, errorText, errorHTTP) {
+                alert('Unable to load charts data. Please try again.');
+            }
+        });
+    }
+
+    /*
+        Ajax call to get data for widget5
+    */
+    function getRidesTracked() {
+        jQuery.ajax({
+            type: "GET",
+            url: "http://api.thebolt.club/admin/user/chart",
+            success: function(response) {
+                var thisWeek, lastWeek, tillDate;
+
+                if (response) {
+                    for (item in response) {
+                        rides_tracked = { key: "Riders", values: [] }
+                        riders_tracked = { key: "Rides Tracked", values: [] }
+                        for (cur in response[item]) {
+                            rides = {
+                                x: response[item][cur]['x'],
+                                y: response[item][cur]['y_rides']
+                            }
+                            riders = {
+                                x: response[item][cur]['x'],
+                                y: response[item][cur]['y_riders']
+                            }
+                            riders_tracked.values.push(riders);
+                            rides_tracked.values.push(rides);
+                        }
+
+                        if (item == 'dataLastWeek') {
+                            lastWeek = []
+                            lastWeek.push(riders_tracked)
+                            lastWeek.push(rides_tracked)
+                        }
+
+                        if (item == 'dataThisWeek') {
+                            thisWeek = []
+                            thisWeek.push(riders_tracked)
+                            thisWeek.push(rides_tracked)
+                        }
+
+                        if (item == 'dataTillDate') {
+                            tillDate = []
+                            tillDate.push(riders_tracked)
+                            tillDate.push(rides_tracked)
+                        }
+                    }
+                }
+                data['widget5']['ridesTracked']['TW'] = thisWeek;
+                data['widget5']['ridesTracked']['LW'] = lastWeek;
+                data['widget5']['ridesTracked']['TD'] = tillDate;
+
+                var jsonData = data.widget5.ridesTracked[widget5Option];
+
+                updateData(ridesChart, jsonData, ridesChartD3)
+            },
+            error: function(errorObject, errorText, errorHTTP) {
+                alert('Unable to load charts data. Please try again.');
+            }
+        });
+
+
+    }
+
+    getRidesTracked();
+    getRideDistribution();
 })();
