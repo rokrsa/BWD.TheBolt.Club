@@ -36,9 +36,12 @@ function checkCreds(e, p){
             "APP_VERSION": '1.0',
             "CONFIG_VERSION": '1.0'
         },
-        success: function (response) {
+        success: function (response,data ,headers) {
             if(response.data.status == 1) {
                 document.cookie = "isLoggedIn=TRUE";
+                //Setting cookie for AdminId. 
+                //TODO: via request header.
+				document.cookie= "AID=" +response.data.AID;
                 window.location.href = "index.html?n="+encodeURI(response.data.name);
                 alert('Welcome to the Bolt Wildcard License Management Tool');
                 return true;

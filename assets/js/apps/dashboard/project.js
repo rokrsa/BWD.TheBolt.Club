@@ -1339,9 +1339,19 @@
         */
     function updateData(chartInstance, data, chartD3) {
         // Update the SVG with the new data and call chart
-        chartD3.datum(data).transition().duration(500).call(chartInstance);
-        nv.utils.windowResize(chartInstance.update);
+        if (chartD3 != null) {
+            chartD3.datum(data).transition().duration(500).call(chartInstance);
+            nv.utils.windowResize(chartInstance.update);
+        }
     };
+
+
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
 
     /*
         Ajax call to get data for widget6
@@ -1349,33 +1359,50 @@
     function getRideDistribution() {
 
         jQuery.ajax({
-            type: "GET",
+            type: "POST",
             url: "http://api.thebolt.club/admin/user/bikes",
+            data: {
+                AID: getCookie('AID')
+            },
             success: function(response) {
-                if (response) {
-                    debugger;
+                if (response.data.status) {
+
+                    var jsonData = response.dashboard;
                     data['widget6']['rideDistribution']['TW'] = [];
                     data['widget6']['rideDistribution']['LW'] = [];
                     data['widget6']['rideDistribution']['TD'] = [];
-                    for(item in response){
-                        var tw={},lw={} ,td={} ;
-                        lw.label = td.label = tw.label=response[item].x;
-                        tw.value=response[item].value_L_W;
-                        lw.value=response[item].value_T_W;
-                        td.value=response[item].value_T_D;
-                        data['widget6']['rideDistribution']['TW'].push(tw);
-                        data['widget6']['rideDistribution']['LW'].push(lw);
-                        data['widget6']['rideDistribution']['TD'].push(td);
+                    for (item in jsonData) {
+                        var tw = {},
+                            lw = {},
+                            td = {};
+
+                        if (jsonData[item] == null || jsonData[item].x == null || jsonData[item].x == "")
+                            continue;
+
+                        lw.label = td.label = tw.label = jsonData[item].x;
+                        tw.value = jsonData[item].value_L_W;
+                        lw.value = jsonData[item].value_T_W;
+                        td.value = jsonData[item].value_T_D;
+
+                        if (tw.value != 0)
+                            data['widget6']['rideDistribution']['TW'].push(tw);
+                        if (lw.value != 0)
+                            data['widget6']['rideDistribution']['LW'].push(lw);
+                        if (td.value != 0)
+                            data['widget6']['rideDistribution']['TD'].push(td);
 
                     }
 
-                    var jsonData = data.widget6.rideDistribution[widget5Option];
+                    var myChartData = data.widget6.rideDistribution[widget5Option];
 
-                    updateData(ridesDistributionChart, jsonData, widget6D3);
+                    updateData(ridesDistributionChart, myChartData, widget6D3);
                 }
             },
             error: function(errorObject, errorText, errorHTTP) {
-                alert('Unable to load charts data. Please try again.');
+                    data['widget6']['rideDistribution']['TW'] = [];
+                    data['widget6']['rideDistribution']['LW'] = [];
+                    data['widget6']['rideDistribution']['TD'] = [];
+                // alert('Unable to load charts data. Please try again.');
             }
         });
     }
@@ -1385,24 +1412,31 @@
     */
     function getRidesTracked() {
         jQuery.ajax({
-            type: "GET",
+            type: "POST",
             url: "http://api.thebolt.club/admin/user/chart",
+            data: {
+                AID: getCookie('AID')
+            },
             success: function(response) {
-                var thisWeek, lastWeek, tillDate;
+                var jsonData = {};
 
                 //Parsing resposne if not null
-                if (response) {
-                    for (item in response) {
+                if (response.data.status) {
+                    jsonData['dataLastWeek'] = response.dashboard['dataLastWeek'];
+                    jsonData['dataThisWeek'] = response.dashboard['dataThisWeek'];
+                    jsonData['dataTillDate'] = response.dashboard['dataTillDate'];
+                    for (item in jsonData) {
                         rides_tracked = { key: "Riders", values: [] }
                         riders_tracked = { key: "Rides Tracked", values: [] }
-                        for (cur in response[item]) {
+                        for (cur in jsonData[item]) {
+
                             rides = {
-                                x: response[item][cur]['x'],
-                                y: response[item][cur]['y_rides']
+                                x: jsonData[item][cur]['x'],
+                                y: jsonData[item][cur]['y_rides']
                             }
                             riders = {
-                                x: response[item][cur]['x'],
-                                y: response[item][cur]['y_riders']
+                                x: jsonData[item][cur]['x'],
+                                y: jsonData[item][cur]['y_riders']
                             }
                             riders_tracked.values.push(riders);
                             rides_tracked.values.push(rides);
@@ -1431,15 +1465,22 @@
                 data['widget5']['ridesTracked']['LW'] = lastWeek;
                 data['widget5']['ridesTracked']['TD'] = tillDate;
 
-                var jsonData = data.widget5.ridesTracked[widget5Option];
+                var myChartData = data.widget5.ridesTracked[widget5Option];
 
-                updateData(ridesChart, jsonData, ridesChartD3)
+                updateData(ridesChart, myChartData, ridesChartD3);
             },
             error: function(errorObject, errorText, errorHTTP) {
-                alert('Unable to load charts data. Please try again.');
+                data['widget5']['ridesTracked']['TW'] = [];
+                data['widget5']['ridesTracked']['LW'] = [];
+                data['widget5']['ridesTracked']['TD'] = [];
+
+                var myChartData = data.widget5.ridesTracked[widget5Option];
+
+                updateData(ridesChart, myChartData, ridesChartD3);
             }
         });
     }
+
 
     getRidesTracked();
     getRideDistribution();
