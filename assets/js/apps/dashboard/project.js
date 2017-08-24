@@ -1362,11 +1362,10 @@
             type: "POST",
             url: "http://api.thebolt.club/admin/user/bikes",
             data: {
-                AID: getCookie('AID')
+                AID: getCookie("AID")
             },
             success: function(response) {
                 if (response.data.status) {
-
                     var jsonData = response.dashboard;
                     data['widget6']['rideDistribution']['TW'] = [];
                     data['widget6']['rideDistribution']['LW'] = [];
@@ -1393,7 +1392,7 @@
 
                     }
 
-                    var myChartData = data.widget6.rideDistribution[widget5Option];
+                    var myChartData = data.widget6.rideDistribution[widget6Option];
 
                     updateData(ridesDistributionChart, myChartData, widget6D3);
                 }
@@ -1415,59 +1414,47 @@
             type: "POST",
             url: "http://api.thebolt.club/admin/user/chart",
             data: {
-                AID: getCookie('AID')
+                AID: getCookie("AID")
             },
             success: function(response) {
-                var jsonData = {};
-
+                var jsonData=[];
                 //Parsing resposne if not null
                 if (response.data.status) {
-                    jsonData['dataLastWeek'] = response.dashboard['dataLastWeek'];
-                    jsonData['dataThisWeek'] = response.dashboard['dataThisWeek'];
-                    jsonData['dataTillDate'] = response.dashboard['dataTillDate'];
-                    for (item in jsonData) {
-                        rides_tracked = { key: "Riders", values: [] }
-                        riders_tracked = { key: "Rides Tracked", values: [] }
-                        for (cur in jsonData[item]) {
+                    jsonData = response.dashboard;
+                    data['widget5']['ridesTracked']['TW'] = [];
+                    data['widget5']['ridesTracked']['LW'] = [];
+                    data['widget5']['ridesTracked']['TD'] = [];
 
-                            rides = {
-                                x: jsonData[item][cur]['x'],
-                                y: jsonData[item][cur]['y_rides']
-                            }
-                            riders = {
-                                x: jsonData[item][cur]['x'],
-                                y: jsonData[item][cur]['y_riders']
-                            }
-                            riders_tracked.values.push(riders);
-                            rides_tracked.values.push(rides);
-                        }
 
-                        if (item == 'dataLastWeek') {
-                            lastWeek = []
-                            lastWeek.push(riders_tracked)
-                            lastWeek.push(rides_tracked)
-                        }
+                        var tw_rides_tracked = { key:'Rides Tracked' ,values:[]},
+                            lw_rides_tracked = { key:'Rides Tracked' ,values:[]},
+                            td_rides_tracked = { key:'Rides Tracked',values:[]},
+                            tw_riders_tracked = { key:'Riders' ,values:[]},
+                            lw_riders_tracked = { key:'Riders' ,values:[]},
+                            td_riders_tracked = { key:'Riders' ,values:[]};
 
-                        if (item == 'dataThisWeek') {
-                            thisWeek = []
-                            thisWeek.push(riders_tracked)
-                            thisWeek.push(rides_tracked)
-                        }
 
-                        if (item == 'dataTillDate') {
-                            tillDate = []
-                            tillDate.push(riders_tracked)
-                            tillDate.push(rides_tracked)
-                        }
+                    for(item in jsonData) {
+                       tw_rides_tracked.values.push({x:jsonData[item]['x'], y:jsonData[item]['y_rides_this_week']});
+                       tw_riders_tracked.values.push({x:jsonData[item]['x'], y:jsonData[item]['y_riders_this_week']});
+                       lw_rides_tracked.values.push({x:jsonData[item]['x'], y:jsonData[item]['y_rides_last_week']});
+                       lw_riders_tracked.values.push({x:jsonData[item]['x'], y:jsonData[item]['y_riders_last_week']});
+                       td_rides_tracked.values.push({x:jsonData[item]['x'], y:jsonData[item]['y_rides_till_date']});
+                       td_riders_tracked.values.push({x:jsonData[item]['x'], y:jsonData[item]['y_riders_till_date']});
+
                     }
+
+                    data['widget5']['ridesTracked']['TW'].push(tw_riders_tracked);
+                    data['widget5']['ridesTracked']['TW'].push(tw_rides_tracked);
+                    data['widget5']['ridesTracked']['LW'].push(lw_riders_tracked);
+                    data['widget5']['ridesTracked']['LW'].push(lw_rides_tracked);
+                    data['widget5']['ridesTracked']['TD'].push(td_riders_tracked);
+                    data['widget5']['ridesTracked']['TD'].push(td_rides_tracked);
+
+                    var myChartData = data.widget5.ridesTracked[widget5Option];
+
+                    updateData(ridesChart, myChartData, ridesChartD3);
                 }
-                data['widget5']['ridesTracked']['TW'] = thisWeek;
-                data['widget5']['ridesTracked']['LW'] = lastWeek;
-                data['widget5']['ridesTracked']['TD'] = tillDate;
-
-                var myChartData = data.widget5.ridesTracked[widget5Option];
-
-                updateData(ridesChart, myChartData, ridesChartD3);
             },
             error: function(errorObject, errorText, errorHTTP) {
                 data['widget5']['ridesTracked']['TW'] = [];
@@ -1480,7 +1467,6 @@
             }
         });
     }
-
 
     getRidesTracked();
     getRideDistribution();

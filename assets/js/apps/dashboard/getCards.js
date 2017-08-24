@@ -38,20 +38,19 @@ function getCards() {
             if (response.data.status) {
 
                 var jsonData = response.dashboard[0];
-                jsonData.riders_count != null ? $("#riders-count").text(jsonData.riders_count): $("#riders-count").text("Loading..").css("font-size","2em");
-                jsonData.check_in_count != null ? $("#check-in-count").text(jsonData.check_in_count): $("#check-in-count").text("Loading..").css("font-size","2em");
-                jsonData.images_count != null ? $("#ride-images-count").text(jsonData.images_count): $("#ride-images-count").text("Loading..").css("font-size","2em");
-                jsonData.rides_tracked_count != null ? $("#rides-tracked-count").text(jsonData.rides_tracked_count): $("#rides-tracked-count").text("Loading..").css("font-size","2em");
-                jsonData.registered_riders_mtd != null ? $("#registered_riders_mtd").text(jsonData.registered_riders_mtd): $("#registered_riders_mtd").text("Loading..");
-                jsonData.ride_images_mtd != null ? $("#ride-images-mtd").text(jsonData.ride_images_mtd): $("#ride-images-mtd").text("Loading..");
-                jsonData.checkins_mtd != null ? $("#checkins-mtd").text(jsonData.checkins_mtd): $("#checkins-mtd").text("Loading..");
+                jsonData.riders_count != null ? $("#riders-count").text(jsonData.riders_count): $("#riders-count").text("---").css("font-size","2em");
+                jsonData.check_in_count != null ? $("#check-in-count").text(jsonData.check_in_count): $("#check-in-count").text("---").css("font-size","2em");
+                jsonData.images_count != null ? $("#ride-images-count").text(jsonData.images_count): $("#ride-images-count").text("---").css("font-size","2em");
+                jsonData.rides_tracked_count != null ? $("#rides-tracked-count").text(jsonData.rides_tracked_count): $("#rides-tracked-count").text("---").css("font-size","2em");
+                jsonData.registered_riders_mtd != null ? $("#registered_riders_mtd").text(jsonData.registered_riders_mtd): $("#registered_riders_mtd").text("---");
+                jsonData.ride_images_mtd != null ? $("#ride-images-mtd").text(jsonData.ride_images_mtd): $("#ride-images-mtd").text("---");
+                jsonData.checkins_mtd != null ? $("#checkins-mtd").text(jsonData.checkins_mtd): $("#checkins-mtd").text("---");
                 
                 if(jsonData.distance_covered != null){
                     var distance_covered = parseInt(jsonData.distance_covered);
                     $("#total-distance").text(formatter(distance_covered) + ' Km');
-                    $("#total-distance").text(distance_covered);
                 }else{
-                    $("#total-distance").text("Loading.");
+                    $("#total-distance").text("---");
                 }
                 
                
@@ -62,15 +61,15 @@ function getCards() {
             }
         },
         error: function(errorObject, errorText, errorHTTP) {
-            debugger;
-                $("#riders-count").text("Loading..").css("font-size","2em");
-                $("#check-in-count").text("Loading..").css("font-size","2em");
-                 $("#ride-images-count").text("Loading..").css("font-size","2em");
-                 $("#rides-tracked-count").text("Loading..").css("font-size","2em");
-                 $("#registered_riders_mtd").text("Loading..");
-                 $("#ride-images-mtd").text("Loading..");
-                 $("#checkins-mtd").text("Loading..");
-                 $("#total-distance").text("Loading.");
+            
+                $("#riders-count").text("Error..").css("font-size","2em");
+                $("#check-in-count").text("Error..").css("font-size","2em");
+                 $("#ride-images-count").text("Error..").css("font-size","2em");
+                 $("#rides-tracked-count").text("Error..").css("font-size","2em");
+                 $("#registered_riders_mtd").text("Error..");
+                 $("#ride-images-mtd").text("Error..");
+                 $("#checkins-mtd").text("Error..");
+                 $("#total-distance").text("Error.");
             deleteAllCookies();
             alert('Server busy. Please try again.');
             return true;
