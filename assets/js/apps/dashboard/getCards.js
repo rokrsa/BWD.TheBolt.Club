@@ -13,9 +13,9 @@ function getCookie(name) {
 */
 function formatter(num) {
     if (num > 999999)
-        return (num / 1000000).toFixed(1) + 'M';
+        return (Math.floor(num/100000) / 10) + 'M';
     else if (num > 999)
-        return (num / 1000).toFixed(1) + 'K';
+        return  (Math.floor(num/100)/10 )+ 'K';
     else
         return num;
 }
@@ -34,26 +34,22 @@ function getCards() {
         },
         success: function(response) {
 
-
+            debugger;
             if (response.data.status) {
 
                 var jsonData = response.dashboard[0];
-                jsonData.riders_count != null ? $("#riders-count").text(jsonData.riders_count): $("#riders-count").text("---").css("font-size","2em");
-                jsonData.check_in_count != null ? $("#check-in-count").text(jsonData.check_in_count): $("#check-in-count").text("---").css("font-size","2em");
-                jsonData.images_count != null ? $("#ride-images-count").text(jsonData.images_count): $("#ride-images-count").text("---").css("font-size","2em");
-                jsonData.rides_tracked_count != null ? $("#rides-tracked-count").text(jsonData.rides_tracked_count): $("#rides-tracked-count").text("---").css("font-size","2em");
-                jsonData.registered_riders_mtd != null ? $("#registered_riders_mtd").text(jsonData.registered_riders_mtd): $("#registered_riders_mtd").text("---");
-                jsonData.ride_images_mtd != null ? $("#ride-images-mtd").text(jsonData.ride_images_mtd): $("#ride-images-mtd").text("---");
-                jsonData.checkins_mtd != null ? $("#checkins-mtd").text(jsonData.checkins_mtd): $("#checkins-mtd").text("---");
-                
-                if(jsonData.distance_covered != null){
-                    var distance_covered = parseInt(jsonData.distance_covered);
-                    $("#total-distance").text(formatter(distance_covered) + ' Km');
-                }else{
-                    $("#total-distance").text("---");
+
+                for(item in jsonData){
+                    if(jsonData[item] != null){
+                        var text = formatter(parseInt(jsonData[item]))
+
+                        if(item == "distance_covered")
+                            text += ' KM'
+                        jsonData[item] != null ? $("#"+item).text(text): $("#"+item).text("---");
+                    }
                 }
                 
-               
+                
                 return true;
             } else {
                 //TODO: put default values inside index
@@ -62,14 +58,14 @@ function getCards() {
         },
         error: function(errorObject, errorText, errorHTTP) {
             
-                $("#riders-count").text("Error..").css("font-size","2em");
-                $("#check-in-count").text("Error..").css("font-size","2em");
-                 $("#ride-images-count").text("Error..").css("font-size","2em");
-                 $("#rides-tracked-count").text("Error..").css("font-size","2em");
+                $("#riders_count").text("Error..").css("font-size","2em");
+                $("#check_in_count").text("Error..").css("font-size","2em");
+                 $("#images_count").text("Error..").css("font-size","2em");
+                 $("#rides_tracked_count").text("Error..").css("font-size","2em");
                  $("#registered_riders_mtd").text("Error..");
-                 $("#ride-images-mtd").text("Error..");
-                 $("#checkins-mtd").text("Error..");
-                 $("#total-distance").text("Error.");
+                 $("#ride_images_mtd").text("Error..");
+                 $("#checkins_mtd").text("Error..");
+                 $("#distance_covered").text("Error.");
             deleteAllCookies();
             alert('Server busy. Please try again.');
             return true;
