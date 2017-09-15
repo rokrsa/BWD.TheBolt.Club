@@ -1,189 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>All Registered Riders</title>
+    <link rel="shortcut icon" href="http://www.thebolt.club/img/favicon.png">
+    <!-- STYLESHEETS -->
+    <style type="text/css">
+    [fuse-cloak],
+    .fuse-cloak {
+        display: none !important;
+    }
 
-        <meta charset="UTF-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>All Registered Riders</title>
-        <link rel="shortcut icon" href="http://www.thebolt.club/img/favicon.png">
+    .col{
+        padding-left: 0px;
+    }
+    </style>
+    <!-- Icons.css -->
+    <link type="text/css" rel="stylesheet" href="../assets/icons/fuse-icon-font/style.css">
+    <!-- Animate.css -->
+    <link type="text/css" rel="stylesheet" href="../assets/vendor/animate.css/animate.min.css">
+    <!-- PNotify -->
+    <link type="text/css" rel="stylesheet" href="../assets/vendor/pnotify/pnotify.custom.min.css">
+    <!-- Nvd3 - D3 Charts -->
+    <link type="text/css" rel="stylesheet" href="../assets/vendor/nvd3/build/nv.d3.min.css" />
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" rel="stylesheet" href="../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+    <!-- Fuse Html -->
+    <link type="text/css" rel="stylesheet" href="../assets/vendor/fuse-html/fuse-html.min.css" />
+    <!-- Main CSS -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
+    <!-- / STYLESHEETS -->
+    <!-- JAVASCRIPT -->
+    <!-- jQuery -->
+    <script type="text/javascript" src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <!-- Mobile Detect -->
+    <script type="text/javascript" src="../assets/vendor/mobile-detect/mobile-detect.min.js"></script>
+    <!-- Perfect Scrollbar -->
+    <script type="text/javascript" src="../assets/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script type="text/javascript" src="../assets/vendor/popper.js/index.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <!-- Nvd3 - D3 Charts -->
+    <script type="text/javascript" src="../assets/vendor/d3/d3.min.js"></script>
+    <script type="text/javascript" src="../assets/vendor/nvd3/build/nv.d3.min.js"></script>
+    <!-- Data tables -->
+    <script type="text/javascript" src="../assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../assets/vendor/datatables-responsive/js/dataTables.responsive.js"></script>
+    <!-- PNotify -->
+    <script type="text/javascript" src="../assets/vendor/pnotify/pnotify.custom.min.js"></script>
+    <!-- Fuse Html -->
+    <script type="text/javascript" src="../assets/vendor/fuse-html/fuse-html.min.js"></script>
+    <!-- Main JS -->
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+    <!-- / JAVASCRIPT -->
+</head>
 
-        <!-- STYLESHEETS -->
-        <style type="text/css">
-            [fuse-cloak],
-            .fuse-cloak {
-                display: none !important;
-            }
-        </style>
-
-        <!-- Icons.css -->
-        <link type="text/css" rel="stylesheet" href="../assets/icons/fuse-icon-font/style.css">
-
-        <!-- Animate.css -->
-        <link type="text/css" rel="stylesheet" href="../assets/vendor/animate.css/animate.min.css">
-
-        <!-- PNotify -->
-        <link type="text/css" rel="stylesheet" href="../assets/vendor/pnotify/pnotify.custom.min.css">
-
-        <!-- Nvd3 - D3 Charts -->
-        <link type="text/css" rel="stylesheet" href="../assets/vendor/nvd3/build/nv.d3.min.css"/>
-
-        <!-- Perfect Scrollbar -->
-        <link type="text/css" rel="stylesheet" href="../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
-
-        <!-- Fuse Html -->
-        <link type="text/css" rel="stylesheet" href="../assets/vendor/fuse-html/fuse-html.min.css"/>
-
-        <!-- Main CSS -->
-        <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
-        <!-- / STYLESHEETS -->
-
-        <!-- JAVASCRIPT -->
-
-        <!-- jQuery -->
-        <script type="text/javascript" src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-
-        <!-- Mobile Detect -->
-        <script type="text/javascript" src="../assets/vendor/mobile-detect/mobile-detect.min.js"></script>
-
-        <!-- Perfect Scrollbar -->
-        <script type="text/javascript"
-                src="../assets/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
-
-        <!-- Popper.js -->
-        <script type="text/javascript" src="../assets/vendor/popper.js/index.js"></script>
-
-        <!-- Bootstrap -->
-        <script type="text/javascript" src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
-
-        <!-- Nvd3 - D3 Charts -->
-        <script type="text/javascript" src="../assets/vendor/d3/d3.min.js"></script>
-        <script type="text/javascript" src="../assets/vendor/nvd3/build/nv.d3.min.js"></script>
-
-        <!-- Data tables -->
-        <script type="text/javascript" src="../assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
-
-        <script type="text/javascript"
-                src="../assets/vendor/datatables-responsive/js/dataTables.responsive.js"></script>
-
-        <!-- PNotify -->
-        <script type="text/javascript" src="../assets/vendor/pnotify/pnotify.custom.min.js"></script>
-
-        <!-- Fuse Html -->
-        <script type="text/javascript" src="../assets/vendor/fuse-html/fuse-html.min.js"></script>
-
-        <!-- Main JS -->
-        <script type="text/javascript" src="../assets/js/main.js"></script>
-
-        <!-- / JAVASCRIPT -->
-    </head>
-
-    <body class="layout layout-vertical layout-left-navigation layout-above-toolbar">
-
+<body class="layout layout-vertical layout-left-navigation layout-above-toolbar">
     <nav id="toolbar" class="fixed-top bg-white">
-
         <div class="row no-gutters align-items-center flex-nowrap">
-
             <div class="col">
-
                 <div class="row no-gutters align-items-center flex-nowrap">
-
-                    <button type="button" class="toggle-aside-button btn btn-icon d-block d-lg-none"
-                            data-fuse-bar-toggle="aside">
+                    <button type="button" class="toggle-aside-button btn btn-icon d-block d-lg-none" data-fuse-bar-toggle="aside">
                         <i class="icon icon-menu"></i>
                     </button>
-
                     <div class="toolbar-separator d-block d-lg-none"></div>
-
                     <div class="shortcuts-wrapper row no-gutters align-items-center px-0 px-sm-2">
-
                         <div class="shortcuts row no-gutters align-items-center d-none d-md-flex">
-
                             <a href="sos-messages.html" class="shortcut-button btn btn-icon mx-1">
                                 <i class="icon icon-hangouts"></i>
                             </a>
-
                             <a href="all-riders.html" class="shortcut-button btn btn-icon mx-1">
                                 <i class="icon icon-account-box"></i>
                             </a>
                         </div>
                     </div>
-
                     <div class="toolbar-separator"></div>
-
                 </div>
             </div>
-
             <div class="col-auto">
-
                 <div class="row no-gutters align-items-center justify-content-end">
-
                     <div class="user-menu-button dropdown">
-
-                        <div class="dropdown-toggle ripple row align-items-center no-gutters px-2 px-sm-4"
-                             role="button"
-                             id="dropdownUserMenu"
-                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-toggle ripple row align-items-center no-gutters px-2 px-sm-4" role="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="avatar-wrapper">
                                 <img class="avatar" src="../assets/images/avatars/profile.jpg">
                                 <i class="status text-green icon-checkbox-marked-circle s-4"></i>
                             </div>
                             <span class="username mx-3 d-none d-md-block" id="merchant-name">John Doe</span>
                         </div>
-
                         <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
-
                             <a class="dropdown-item" href="my-profile.html">
                                 <div class="row no-gutters align-items-center flex-nowrap">
                                     <i class="icon-account"></i>
                                     <span class="px-3">My Profile</span>
                                 </div>
                             </a>
-
                             <div class="dropdown-divider"></div>
-
                             <a class="dropdown-item" href="#">
                                 <div class="row no-gutters align-items-center flex-nowrap">
                                     <i class="icon-logout"></i>
                                     <span class="px-3">Logout</span>
                                 </div>
                             </a>
-
                         </div>
                     </div>
-
                     <div class="toolbar-separator"></div>
-
                     <div class="language-button dropdown">
-
-                        <div
-                                class="dropdown-toggle ripple row align-items-center justify-content-center no-gutters px-0 px-sm-4"
-                                role="button"
-                                id="dropdownLanguageMenu"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-toggle ripple row align-items-center justify-content-center no-gutters px-0 px-sm-4" role="button" id="dropdownLanguageMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="row no-gutters align-items-center">
                                 <img class="flag mr-2" src="../assets/images/flags/us.png">
                                 <span class="d-none d-md-block">EN</span>
                             </div>
                         </div>
-
                         <div class="dropdown-menu" aria-labelledby="dropdownLanguageMenu">
-
                             <a class="dropdown-item" href="#">
                                 <div class="row no-gutters align-items-center flex-nowrap">
                                     <img class="flag" src="../assets/images/flags/us.png">
                                     <span class="px-3">English</span>
                                 </div>
                             </a>
-
                             <a class="dropdown-item" href="#">
                                 <div class="row no-gutters align-items-center flex-nowrap">
                                     <img class="flag" src="../assets/images/flags/es.png">
                                     <span class="px-3">Spanish</span>
                                 </div>
                             </a>
-
                             <a class="dropdown-item" href="#">
                                 <div class="row no-gutters align-items-center flex-nowrap">
                                     <img class="flag" src="../assets/images/flags/tr.png">
@@ -192,1411 +136,178 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </nav>
-
-        <div id="wrapper">
-
-            <aside id="aside" class="aside aside-left"
-                   data-fuse-bar="aside" data-fuse-bar-media-step="md"
-                   data-fuse-bar-position="left">
-                <div class="aside-content-wrapper">
-
-                    <div class="aside-content">
-
-                        <div class="aside-toolbar">
-
-                            <div class="logo">
-                                <span class="logo-icon icon-road"></span>
-                                <span class="logo-text">BOLT</span>
-                            </div>
-
-                            <button id="toggle-fold-aside-button" type="button" class="btn btn-icon d-none d-lg-block"
-                                    data-fuse-aside-toggle-fold>
-                                <i class="icon icon-backburger"></i>
-                            </button>
-
+    <div id="wrapper">
+        <aside id="aside" class="aside aside-left" data-fuse-bar="aside" data-fuse-bar-media-step="md" data-fuse-bar-position="left">
+            <div class="aside-content-wrapper">
+                <div class="aside-content">
+                    <div class="aside-toolbar">
+                        <div class="logo">
+                            <span class="logo-icon icon-road"></span>
+                            <span class="logo-text">BOLT</span>
                         </div>
-
-                        <ul class="nav flex-column custom-scrollbar" id="sidenav" data-children=".nav-item">
-
-                            <li class="subheader">
-                                <span>BOLT WILDCARD MANAGEMENT</span>
-                            </li>
-
-                            <li class="nav-item" role="tab" id="heading-dashboards">
-
-                                <a class="nav-link ripple with-arrow "
-                                   data-toggle="collapse"
-                                   data-target="#collapse-dashboards"
-                                   href="#"
-                                   aria-expanded="true"
-                                   aria-controls="collapse-dashboards">
+                        <button id="toggle-fold-aside-button" type="button" class="btn btn-icon d-none d-lg-block" data-fuse-aside-toggle-fold>
+                            <i class="icon icon-backburger"></i>
+                        </button>
+                    </div>
+                    <ul class="nav flex-column custom-scrollbar" id="sidenav" data-children=".nav-item">
+                        <li class="subheader">
+                            <span>BOLT WILDCARD MANAGEMENT</span>
+                        </li>
+                        <li class="nav-item" role="tab" id="heading-dashboards">
+                            <a class="nav-link ripple with-arrow " data-toggle="collapse" data-target="#collapse-dashboards" href="#" aria-expanded="true" aria-controls="collapse-dashboards">
                                     <i class="icon s-4 icon-tile-four"></i>
                                     <span>Dashboard</span>
                                 </a>
-
-                                <ul id="collapse-dashboards"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="heading-dashboards"
-                                    data-children=".nav-item">
-
-                                    <li class="nav-item">
-                                        <a class="nav-link ripple " href="index.html">
+                            <ul id="collapse-dashboards" class="collapse show" role="tabpanel" aria-labelledby="heading-dashboards" data-children=".nav-item">
+                                <li class="nav-item">
+                                    <a class="nav-link ripple " href="index.html">
                                             <span>Overall Summary</span>
                                         </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link ripple " href="sos-messages.html">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ripple " href="sos-messages.html">
                                     <i class="icon s-4 icon-hangouts"></i>
                                     <span>SOS Messages</span>
                                 </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link ripple active" href="all-riders.html">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ripple active" href="all-riders.html">
                                     <i class="icon s-4 icon-account-box"></i>
                                     <span>All Riders</span>
                                 </a>
-                            </li>
-
-                            <li class="subheader">
-                                <span>SETTINGS</span>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link ripple " href="my-profile.html"
-                                   data-page-url="/apps-dashboards-project.html">
+                        </li>
+                        <li class="subheader">
+                            <span>SETTINGS</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ripple " href="my-profile.html" data-page-url="/apps-dashboards-project.html">
                                     <i class="icon s-4 icon-account"></i>
                                     <span>My Profile</span>
                                 </a>
-                            </li>
-
-                            <li class="nav-item" role="tab" id="heading-security">
-
-                                <a class="nav-link ripple with-arrow collapsed"
-                                   data-toggle="collapse"
-                                   data-target="#collapse-authentication"
-                                   href="#"
-                                   aria-expanded="false"
-                                   aria-controls="collapse-authentication">
+                        </li>
+                        <li class="nav-item" role="tab" id="heading-security">
+                            <a class="nav-link ripple with-arrow collapsed" data-toggle="collapse" data-target="#collapse-authentication" href="#" aria-expanded="false" aria-controls="collapse-authentication">
                                     <i class="icon s-4 icon-lock"></i>
                                     <span>Security</span>
                                 </a>
-
-                                <ul id="collapse-authentication"
-                                    class="collapse"
-                                    role="tabpanel"
-                                    aria-labelledby="heading-authentication"
-                                    data-children=".nav-item">
-
-                                    <li class="nav-item">
-                                        <a class="nav-link ripple " href="reset-password.html"
-                                           data-page-url="/apps-dashboards-server.html">
+                            <ul id="collapse-authentication" class="collapse" role="tabpanel" aria-labelledby="heading-authentication" data-children=".nav-item">
+                                <li class="nav-item">
+                                    <a class="nav-link ripple " href="reset-password.html" data-page-url="/apps-dashboards-server.html">
 
                                             <span>Reset Password</span>
                                         </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link ripple " href="lock.html"
-                                           data-page-url="/apps-dashboards-server.html">
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link ripple " href="lock.html" data-page-url="/apps-dashboards-server.html">
                                             <span>Lock Screen</span>
                                         </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </aside>
-
-            <div class="content-wrapper">
-
-                <div class="content">
-                    <div id="contacts" class="page-layout simple left-sidebar-floating">
-
-                        <div
-                            class="page-header bg-primary text-auto row no-gutters align-items-center justify-content-between p-4 p-sm-6">
-
-                            <div class="col">
-
-                                <div class="row no-gutters align-items-center flex-nowrap">
-
-                                    <button type="button"
-                                            class="sidebar-toggle-button btn btn-icon d-inline-block d-lg-none mr-2"
-                                            data-fuse-bar-toggle="contacts-sidebar">
-                                        <i class="icon icon-menu"></i>
-                                    </button>
-
-                                    <!-- APP TITLE -->
-                                    <div class="logo row no-gutters align-items-center flex-nowrap">
-                    <span class="logo-icon mr-4">
+            </div>
+        </aside>
+        <div class="content-wrapper">
+            <div class="content">
+                <div id="contacts" class="page-layout simple left-sidebar-floating">
+                    <div class="page-header bg-primary text-auto row no-gutters align-items-center justify-content-between p-4 p-sm-6">
+                        <div class="col">
+                            <div class="row no-gutters align-items-center flex-nowrap">
+                                <button type="button" class="sidebar-toggle-button btn btn-icon d-inline-block d-lg-none mr-2" data-fuse-bar-toggle="contacts-sidebar">
+                                    <i class="icon icon-menu"></i>
+                                </button>
+                                <!-- APP TITLE -->
+                                <div class="logo row no-gutters align-items-center flex-nowrap">
+                                    <span class="logo-icon mr-4">
                         <i class="icon-account-box s-6"></i>
                     </span>
-                                        <span class="logo-text h4">All Riders</span>
-                                    </div>
+                                    <span class="logo-text h4">All Riders</span>
                                 </div>
-                                <!-- / APP TITLE -->
                             </div>
-
-                            <!-- SEARCH -->
-                            <div class="col search-wrapper">
-
-                                <div class="input-group">
-
-                <span class="input-group-btn">
+                            <!-- / APP TITLE -->
+                        </div>
+                        <!-- SEARCH -->
+                        <div class="col search-wrapper">
+                            <div class="input-group">
+                                <span class="input-group-btn">
 
                     <button type="button" class="btn btn-icon">
                         <i class="icon icon-magnify"></i>
                     </button>
 
                 </span>
-
-                                    <input id="contacts-search-input" type="text" class="form-control"
-                                           placeholder="Search for a rider"
-                                           aria-label="Search for a rider"/>
-
-                                </div>
+                                <input id="contacts-search-input" type="text" class="form-control" placeholder="Search for a rider" aria-label="Search for a rider" />
                             </div>
-                            <!-- / SEARCH -->
                         </div>
-                        <!-- / HEADER -->
-
-                        <div class="page-content-wrapper">
-                            <!-- CONTENT -->
-                            <div class="page-content p-4 p-sm-6">
-                                <!-- Rider LIST -->
-                                <div class="contacts-list card">
-
-                                    <!-- Rider LIST HEADER -->
-                                    <dvi class="contacts-list-header p-4">
-
-                                        <div class="row no-gutters align-items-center justify-content-between">
-
-                                            <div class="list-title text-muted">
-                                                Registered Riders (25)
-                                            </div>
-
+                        <!-- / SEARCH -->
+                    </div>
+                    <!-- / HEADER -->
+                    <div class="page-content-wrapper">
+                        <!-- CONTENT -->
+                        <div class="page-content p-4 p-sm-6">
+                            <!-- Rider LIST -->
+                            <div class="contacts-list card">
+                                <!-- Rider LIST HEADER -->
+                                <div class="contacts-list-header p-4" id="contact_list_header">
+                                    <div class="row no-gutters align-items-center justify-content-between">
+                                        <div class="list-title text-muted">
+                                            Recent Riders
+                                        </div>
+                                        <button type="button" class="btn btn-icon">
+                                            <i class="icon icon-sort-alphabetical"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- / CONTACT LIST HEADER -->
+                                <!-- CONTACT ITEM -->
+                              <!--   <div class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
+                                    <label class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" />
+                                        <span class="custom-control-indicator"></span>
+                                    </label>
+                                    <img class="avatar mx-4" alt="Abbott" src="../assets/images/avatars/Abbott.jpg" />
+                                    <div class="col text-truncate font-weight-bold">Abbott Keitch</div>
+                                    <div class="col email text-truncate px-1 d-none d-xl-flex">
+                                        abbott@withinpixels.com
+                                    </div>
+                                    <div class="col phone text-truncate px-1 d-none d-xl-flex">
+                                        +1-202-555-0175
+                                    </div>
+                                    <div class="col job-title text-truncate px-1 d-none d-sm-flex">
+                                        Digital Archivist
+                                    </div>
+                                    <div class="col company text-truncate px-1 d-none d-sm-flex">
+                                        Saois
+                                    </div>
+                                    <div class="col-auto actions">
+                                        <div class="row no-gutters">
                                             <button type="button" class="btn btn-icon">
-                                                <i class="icon icon-sort-alphabetical"></i>
+                                                <i class="icon-star-outline"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-icon">
+                                                <i class="icon icon-dots-vertical"></i>
                                             </button>
                                         </div>
-
-                                    </dvi>
-                                    <!-- / CONTACT LIST HEADER -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Abbott"
-                                             src="../assets/images/avatars/Abbott.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Abbott Keitch</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            abbott@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0175
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Digital Archivist
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Saois
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
                                     </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Arnold"
-                                             src="../assets/images/avatars/Arnold.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Arnold Matlock</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            arnold@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0141
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Graphic Artist
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Laotcone
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Barrera"
-                                             src="../assets/images/avatars/Barrera.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Barrera Bradbury</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            barrera@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0196
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Graphic Designer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Unizim
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Blair" src="../assets/images/avatars/Blair.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Blair Strangeway</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            blair@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0118
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Visual Designer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Conedubdax
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Boyle" src="../assets/images/avatars/Boyle.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Boyle Winters</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            boyle@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0177
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Catalogue Illustrator
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Newo
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Christy"
-                                             src="../assets/images/avatars/Christy.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Christy Camacho</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            christy@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0136
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            3D Animator
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            uniway
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Copeland"
-                                             src="../assets/images/avatars/Copeland.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Copeland Redcliff</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            copeland@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0107
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Multimedia Artist
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Tempron
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Estes" src="../assets/images/avatars/Estes.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Estes Stevens</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            estes@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0113
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Special Effects Artist
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            nam-dex
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Harper"
-                                             src="../assets/images/avatars/Harper.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Harper MacGuffin</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            harper@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0173
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Application Developer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            runcane
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Helen" src="../assets/images/avatars/Helen.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Helen Sheridan</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            helen@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0163
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Content Developer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Subhow
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Henderson"
-                                             src="../assets/images/avatars/Henderson.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Henderson Cambias</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            henderson@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0151
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Web Designer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Howcom
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Josefina"
-                                             src="../assets/images/avatars/Josefina.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Josefina Lakefield</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            josefina@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0160
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Web Developer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Gecko
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Katina"
-                                             src="../assets/images/avatars/Katina.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Katina Bletchley</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            katina@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0186
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Software Designer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Lexicom
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Lily" src="../assets/images/avatars/Lily.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Lily Peasegood</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            lily@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0115
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Software Specialist
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            zooflex
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Mai" src="../assets/images/avatars/Mai.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Mai Nox</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            mai@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0199
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Software Engineer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            quadzone
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Nancy" src="../assets/images/avatars/Nancy.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Nancy Jaggers</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            nancy@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0120
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Software Architect
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Opetamnix
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Nora" src="../assets/images/avatars/Nora.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Nora Franklin</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            nora@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0172
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Database Coordinator
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Saoway
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Odessa"
-                                             src="../assets/images/avatars/Odessa.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Odessa Goodman</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            odessa@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0190
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Database Administration Manager
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            transace
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Reyna" src="../assets/images/avatars/Reyna.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Reyna Preece</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            reyna@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0116
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Data Processing Planner
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Dingex
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Shauna"
-                                             src="../assets/images/avatars/Shauna.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Shauna Atherton</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            shauna@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0159
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Art Director
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Vivaflex
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Shepard"
-                                             src="../assets/images/avatars/Shepard.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Shepard Rosco</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            shepard@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0173
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Magazine Designer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Goldenla
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Tillman"
-                                             src="../assets/images/avatars/Tillman.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Tillman Lee</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            tillman@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0183
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            News Photographer
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            K-techno
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Trevino"
-                                             src="../assets/images/avatars/Trevino.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Trevino Bush</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            trevino@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0138
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Photojournalist
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Dalthex
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Tyson" src="../assets/images/avatars/Tyson.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Tyson Marshall</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            tyson@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0146
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Manuscript Editor
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            Geocon
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                    <!-- CONTACT ITEM -->
-                                    <div
-                                        class="contact-item ripple row no-gutters align-items-center py-2 px-3 py-sm-4 px-sm-6">
-
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input"/>
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-
-                                        <img class="avatar mx-4" alt="Velazquez"
-                                             src="../assets/images/avatars/Velazquez.jpg"/>
-
-                                        <div class="col text-truncate font-weight-bold">Velazquez Smethley</div>
-
-                                        <div class="col email text-truncate px-1 d-none d-xl-flex">
-                                            velezquez@withinpixels.com
-                                        </div>
-
-                                        <div class="col phone text-truncate px-1 d-none d-xl-flex">
-                                            +1-202-555-0146
-                                        </div>
-
-                                        <div class="col job-title text-truncate px-1 d-none d-sm-flex">
-                                            Publications Editor
-                                        </div>
-
-                                        <div class="col company text-truncate px-1 d-none d-sm-flex">
-                                            ranex
-                                        </div>
-
-                                        <div class="col-auto actions">
-
-                                            <div class="row no-gutters">
-
-                                                <button type="button" class="btn btn-icon">
-
-                                                    <i class="icon-star-outline"></i>
-
-                                                </button>
-
-                                                <button type="button" class="btn btn-icon">
-                                                    <i class="icon icon-dots-vertical"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CONTACT ITEM -->
-
-                                </div>
-                                <!-- / CONTACT LIST -->
+                                </div> -->
+                                <!-- CONTACT ITEM -->
                             </div>
-                            <!-- / CONTENT -->
+                            <!-- / CONTACT LIST -->
                         </div>
-                        <script type="text/javascript" src="../assets/js/apps/all-riders/riders.js"></script>
+                        <!-- / CONTENT -->
                     </div>
+                    <script type="text/javascript" src="../assets/js/apps/all-riders/riders.js"></script>
                 </div>
-
             </div>
-
         </div>
+    </div>
+</body>
 
-    </body>
 </html>

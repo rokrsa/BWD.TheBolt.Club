@@ -128,10 +128,10 @@
 
                                 <div class="user-info flex-column row flex-lg-row no-gutters align-items-center">
 
-                                    <img class="profile-image avatar huge mr-6"
-                                         src="../assets/images/avatars/katherine.jpg">
+                                    <img class="profile-image avatar huge mr-6" id="user_profile_img"
+                                         src="../assets/images/avatars/profile.jpg">
 
-                                    <div class="name h2 my-6">John Doe</div>
+                                    <div class="name h2 my-6" id="user_profile"></div>
 
                                 </div>
 
@@ -844,85 +844,33 @@
                                                 <div class="content p-4">
 
                                                     <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Gender</div>
-                                                        <div class="info">Female</div>
+                                                        <div class="title font-weight-bold mb-1">Activation Code</div>
+                                                        <div class="info" id="activation_code"></div>
                                                     </div>
 
                                                     <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Birthday</div>
-                                                        <div class="info">12.01.1987</div>
+                                                        <div class="title font-weight-bold mb-1">Last Reported Time</div>
+                                                        <div class="info" id="last_reported_time"></div>
                                                     </div>
 
                                                     <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Locations</div>
+                                                        <div class="title font-weight-bold mb-1">Location</div>
 
                                                         <div class="info location">
-                                                            <span>Istanbul, Turkey</span>
+                                                            <span id="location"></span>
                                                             <i class="icon-map-marker s-4"></i>
                                                         </div>
 
-                                                        <div class="info location">
-                                                            <span>New York, USA</span>
-                                                            <i class="icon-map-marker s-4"></i>
-                                                        </div>
 
                                                     </div>
+                                                    <div class="info-line mb-6">
+                                                        <div class="title font-weight-bold mb-1">Bike Model</div>
+                                                        <div class="info" id ="bike_model"></div>
 
-                                                    <div class="info-line">
-                                                        <div class="title font-weight-bold mb-1">About Me</div>
-                                                        <div class="info">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit. Duis eget pharetra felis, sed ullamcorper
-                                                            dui. Sed et elementum neque. Vestibulum pellente viverra
-                                                            ultrices. Etiam justo augue, vehicula ac gravida a, interdum
-                                                            sit amet nisl. Integer vitae nisi id nibh dictum mollis in
-                                                            vitae tortor.
-                                                        </div>
                                                     </div>
 
                                                 </div>
                                             </div>
-
-                                            <div class="profile-box info-box work card mb-4">
-
-                                                <header class="h6 bg-primary text-auto p-4">
-                                                    <div class="title">Work</div>
-                                                </header>
-
-                                                <div class="content p-4">
-
-                                                    <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Occupation</div>
-                                                        <div class="info">Developer</div>
-                                                    </div>
-
-                                                    <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Skills</div>
-                                                        <div class="info">C#, PHP, Javascript, Angular, JS, HTML, CSS
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Jobs</div>
-                                                        <table class="info jobs">
-
-                                                            <tr class="job">
-                                                                <td class="company font-weight-bold pr-4">
-                                                                    Self-Employed
-                                                                </td>
-                                                                <td class="date">2010 - Now</td>
-                                                            </tr>
-
-                                                            <tr class="job">
-                                                                <td class="company font-weight-bold pr-4">Google</td>
-                                                                <td class="date">2008 - 2010</td>
-                                                            </tr>
-
-                                                        </table>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
                                             <div class="profile-box info-box contact card mb-4">
 
                                                 <header class="h6 bg-primary text-auto p-4">
@@ -932,44 +880,10 @@
                                                 <div class="content p-4">
 
                                                     <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Address</div>
-                                                        <div class="info">Ut pharetra luctus est quis sodales. Duis nisi
-                                                            tortor, bibendum eget tincidunt, aliquam ac elit. Mauris nec
-                                                            euismod odio.
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Tel.</div>
-
-                                                        <div class="info">
-                                                            <span>+6 555 6600</span>
-                                                        </div>
-
-                                                        <div class="info">
-                                                            <span>+9 555 5255</span>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Website</div>
-
-                                                        <div class="info">
-                                                            <span>withinpixels.com</span>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="info-line mb-6">
-                                                        <div class="title font-weight-bold mb-1">Emails</div>
+                                                        <div class="title font-weight-bold mb-1">Email</div>
 
                                                         <div class="info" ng-repeat="email in vm.about.contact.emails">
-                                                            <span>mail@withinpixels.com</span>
-                                                        </div>
-
-                                                        <div class="info" ng-repeat="email in vm.about.contact.emails">
-                                                            <span>mail@creapond.com</span>
+                                                            <span id="profile_email"></span>
                                                         </div>
 
                                                     </div>
@@ -987,40 +901,12 @@
                                                     <div class="title h6">Friends</div>
                                                     <div class="more text-muted">
                                                         <span>See</span>
-                                                        <span>454</span>
+                                                        <span id="see_all_friends"></span>
                                                         <span>More</span>
                                                     </div>
                                                 </header>
 
-                                                <div class="content row no-gutters p-4">
-
-                                                    <div class="friend col-3 p-1">
-                                                        <img class="w-100" src="../assets/images/avatars/garry.jpg">
-                                                    </div>
-
-                                                    <div class="friend col-3 p-1">
-                                                        <img class="w-100" src="../assets/images/avatars/carl.jpg">
-                                                    </div>
-
-                                                    <div class="friend col-3 p-1">
-                                                        <img class="w-100" src="../assets/images/avatars/jane.jpg">
-                                                    </div>
-
-                                                    <div class="friend col-3 p-1">
-                                                        <img class="w-100" src="../assets/images/avatars/garry.jpg">
-                                                    </div>
-
-                                                    <div class="friend col-3 p-1">
-                                                        <img class="w-100" src="../assets/images/avatars/vincent.jpg">
-                                                    </div>
-
-                                                    <div class="friend col-3 p-1">
-                                                        <img class="w-100" src="../assets/images/avatars/alice.jpg">
-                                                    </div>
-
-                                                    <div class="friend col-3 p-1">
-                                                        <img class="w-100" src="../assets/images/avatars/andrew.jpg">
-                                                    </div>
+                                                <div class="content row no-gutters p-4" id="friend_images">
 
                                                 </div>
 

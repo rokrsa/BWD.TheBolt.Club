@@ -34,7 +34,7 @@ function getCards() {
         },
         success: function(response) {
 
-            debugger;
+            
             if (response.data.status) {
 
                 var jsonData = response.dashboard[0];

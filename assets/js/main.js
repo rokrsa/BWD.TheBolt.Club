@@ -1,24 +1,19 @@
-(function ()
-{
-    $('document').ready(function ()
-    {
+(function() {
+    $('document').ready(function() {
         // Prevent default for empty links
-        $('[href="#"]').click(function (e)
-        {
+        $('[href="#"]').click(function(e) {
             e.preventDefault()
         })
 
         // Adding data-parent to togglable nav items
-        $('#sidenav [data-toggle]').each(function ()
-        {
+        $('#sidenav [data-toggle]').each(function() {
             $(this).attr('data-parent', '#' + $(this).parent().parent().attr('id'));
         })
 
         /**
          * Trigger window resize to update nvd3 charts
          */
-        $('[data-toggle="tab"]').on('shown.bs.tab', function (e)
-        {
+        $('[data-toggle="tab"]').on('shown.bs.tab', function(e) {
             window.dispatchEvent(new Event('resize'));
         });
 
@@ -33,7 +28,7 @@
         $('[data-toggle="popover"]').popover();
 
         // Activate animated progress bar
-        $('.bd-toggle-animated-progress').on('click', function () {
+        $('.bd-toggle-animated-progress').on('click', function() {
             $(this).siblings('.progress').find('.progress-bar-striped').toggleClass('progress-bar-animated')
         })
 
@@ -42,30 +37,25 @@
          */
         var mobileDetect = new MobileDetect(window.navigator.userAgent);
 
-        if ( !mobileDetect.mobile() )
-        {
+        if (!mobileDetect.mobile()) {
             $('.custom-scrollbar').perfectScrollbar();
         }
 
         /**
          * Fix code block indentations
          */
-        $('code').each(function ()
-        {
+        $('code').each(function() {
             var lines = $(this).html().split('\n');
 
-            if ( lines[0] === '' )
-            {
+            if (lines[0] === '') {
                 lines.shift()
             }
 
             var matches;
             var indentation = (matches = /^\s+/.exec(lines[0])) !== null ? matches[0] : null;
 
-            if ( !!indentation )
-            {
-                lines = lines.map(function (line)
-                {
+            if (!!indentation) {
+                lines = lines.map(function(line) {
                     return line.replace(indentation, '');
                 });
 
@@ -76,8 +66,7 @@
         /**
          * Flip source-preview cards
          */
-        $('.toggle-source-preview').on('click', function ()
-        {
+        $('.toggle-source-preview').on('click', function() {
             $(this).parents('.example').toggleClass('show-source');
         });
     });
@@ -85,11 +74,10 @@
     /**
      * Data tables fix header resize
      */
-    $(window).on('resize', function ()
-    {
+    $(window).on('resize', function() {
         $.fn.dataTable.tables({
             visible: true,
-            api    : true
+            api: true
         }).columns.adjust();
     })
 
@@ -101,5 +89,6 @@
      console.info('match media changed');
      console.info(currentStep);
      });*/
+
 
 })();
